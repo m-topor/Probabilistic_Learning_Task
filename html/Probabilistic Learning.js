@@ -390,7 +390,7 @@ function experimentInit() {
   task_outro = new visual.TextStim({
     win: psychoJS.window,
     name: 'task_outro',
-    text: 'Thank you, the learning task is now finished.',
+    text: 'Thank you, the learning task is now finished.\n\nYou can press Esc to exit the full screen. \n\nYou can then close this window. ',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
