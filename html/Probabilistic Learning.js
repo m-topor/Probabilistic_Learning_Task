@@ -213,7 +213,7 @@ function experimentInit() {
   prep_outro = new visual.TextStim({
     win: psychoJS.window,
     name: 'prep_outro',
-    text: 'The practice phase is now finished.\n\nYou may have noticed that one of the symbols was more likely to give you points. \n\nThis was not always the case. \n\nIt was more PROBABLE that one symbol gave you points. \n\n\nPress any key to continue. ',
+    text: 'The practice session is now finished.\n\nYou may have noticed that one of the symbols was more likely to give you points. \n\nThis was not always the case. \n\nIt was more PROBABLE that one symbol gave you points. \n\n\nPress any key to continue. ',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -229,7 +229,7 @@ function experimentInit() {
   pract_intr = new visual.TextStim({
     win: psychoJS.window,
     name: 'pract_intr',
-    text: 'Training Session\n\nYou will see 3 pairs of characters. \n\nIn each pair, one symbol is more PROBABLE to give you points. \n\nIdentify those symbols and choose them.\nAvoid symbols that make you lose points. \n\nUse buttons:\nleft(C)     right(M)\nto make your choices. \n\n\nPress any key to begin.\n',
+    text: 'Training Session\n\nYou will see 3 pairs of symbols. \n\nIn each pair, one symbol is more PROBABLE to give you points. \n\nIdentify those symbols and choose them.\nAvoid symbols that make you lose points. \n\nUse buttons:\nleft(C)            right(M)\nto make your choices. \n\n\nPress any key to begin.\n',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -316,7 +316,7 @@ function experimentInit() {
   instr2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instr2',
-    text: 'The training phase is now finished. Press any key to continue onto the next section.\n',
+    text: 'The training session is now finished. \n\nPress any key to continue onto the next section.\n',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -329,10 +329,10 @@ function experimentInit() {
   instr3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instr3',
-    text: 'Test Phase\n\nYou will again be shown pairs of symbols to choose from. \nThese are the symbols which you just trained on, but in different order and combination. \nUse   C     and    M     to make your choices.\n\nAs this is the Test Phase no information about gaining or losing points will be given. \n\nRemember to choose the symbols that are the most likely to give you extra points and avoid the symbols that are the most likely to make you lose points. \nIf you are unsure go with your gut feeling.\n\nPress any key to begin.\n',
+    text: 'Test Session\n\nYou will see the same symbols again. \n\nNow, in different order and combination. \n\nPick the symbol that is the most PROBABLE to give you points.\nAvoid the symbol that makes you lose points.\n\nUse buttons:\nleft(C)            right(M)\n\nMake your decision as quickly as you can.\nIf you are unsure go with your gut feeling.\n\n\nPress any key to begin.\n',
     font: 'Calibri',
     units : undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -1186,6 +1186,10 @@ function Practice_InstructionRoutineBegin() {
   frameN = -1;
   // update component parameters for each repeat
   myCount = myCount + 1
+  
+  if (myCount > 1){
+      letterMaster.finished = true;
+  }
   instr1_resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
@@ -2068,6 +2072,9 @@ function test_trialRoutineEnd() {
     if (typeof thisComponent.setAutoDraw === 'function') {
       thisComponent.setAutoDraw(false);
     }
+  }
+  if (myCount > 1){
+      letterMaster.finished = true;
   }
   
   // check responses

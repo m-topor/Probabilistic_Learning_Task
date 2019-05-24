@@ -223,7 +223,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The training phase is now finished. Press any key to continue onto the next section.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="The training session is now finished. &amp;#10;&amp;#10;Press any key to continue onto the next section.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -257,7 +257,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (myCount &gt; 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="&amp;#10;&amp;#10;if (test_resp.keys == pickA):&amp;#10;    posLB = 1&amp;#10;else:&amp;#10;    posLB = 0&amp;#10;&amp;#10;if (test_resp.keys == avoidB):&amp;#10;    negLB = 1&amp;#10;else:&amp;#10;    negLB = 0&amp;#10;&amp;#10;&amp;#10;test.addData('jitter', jitter)&amp;#10;&amp;#10;&amp;#10;test.addData('posLB', posLB)&amp;#10;test.addData('negLB', negLB)&amp;#10;&amp;#10;if myCount &gt; 3:&amp;#10;    letterMaster.finished = True" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_3" valType="code"/>
@@ -362,7 +362,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Calibri" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
         <Param name="name" updates="None" val="instr3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -374,7 +374,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Test Phase&amp;#10;&amp;#10;You will again be shown pairs of symbols to choose from. &amp;#10;These are the symbols which you just trained on, but in different order and combination. &amp;#10;Use   C     and    M     to make your choices.&amp;#10;&amp;#10;As this is the Test Phase no information about gaining or losing points will be given. &amp;#10;&amp;#10;Remember to choose the symbols that are the most likely to give you extra points and avoid the symbols that are the most likely to make you lose points. &amp;#10;If you are unsure go with your gut feeling.&amp;#10;&amp;#10;Press any key to begin.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Test Session&amp;#10;&amp;#10;You will see the same symbols again. &amp;#10;&amp;#10;Now, in different order and combination. &amp;#10;&amp;#10;Pick the symbol that is the most PROBABLE to give you points.&amp;#10;Avoid the symbol that makes you lose points.&amp;#10;&amp;#10;Use buttons:&amp;#10;left(C)            right(M)&amp;#10;&amp;#10;Make your decision as quickly as you can.&amp;#10;If you are unsure go with your gut feeling.&amp;#10;&amp;#10;&amp;#10;Press any key to begin.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -534,7 +534,7 @@
       <CodeComponent name="code_6">
         <Param name="Begin Experiment" updates="constant" val="myCount = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="myCount = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="myCount = myCount + 1" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if (myCount &gt; 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if myCount == 3:&amp;#10;    letterMaster.finished = True&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
@@ -566,7 +566,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Training Session&amp;#10;&amp;#10;You will see 3 pairs of characters. &amp;#10;&amp;#10;In each pair, one symbol is more PROBABLE to give you points. &amp;#10;&amp;#10;Identify those symbols and choose them.&amp;#10;Avoid symbols that make you lose points. &amp;#10;&amp;#10;Use buttons:&amp;#10;left(C)     right(M)&amp;#10;to make your choices. &amp;#10;&amp;#10;&amp;#10;Press any key to begin.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Training Session&amp;#10;&amp;#10;You will see 3 pairs of symbols. &amp;#10;&amp;#10;In each pair, one symbol is more PROBABLE to give you points. &amp;#10;&amp;#10;Identify those symbols and choose them.&amp;#10;Avoid symbols that make you lose points. &amp;#10;&amp;#10;Use buttons:&amp;#10;left(C)            right(M)&amp;#10;to make your choices. &amp;#10;&amp;#10;&amp;#10;Press any key to begin.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -654,7 +654,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The practice phase is now finished.&amp;#10;&amp;#10;You may have noticed that one of the symbols was more likely to give you points. &amp;#10;&amp;#10;This was not always the case. &amp;#10;&amp;#10;It was more PROBABLE that one symbol gave you points. &amp;#10;&amp;#10;&amp;#10;Press any key to continue. " valType="str"/>
+        <Param name="text" updates="constant" val="The practice session is now finished.&amp;#10;&amp;#10;You may have noticed that one of the symbols was more likely to give you points. &amp;#10;&amp;#10;This was not always the case. &amp;#10;&amp;#10;It was more PROBABLE that one symbol gave you points. &amp;#10;&amp;#10;&amp;#10;Press any key to continue. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
