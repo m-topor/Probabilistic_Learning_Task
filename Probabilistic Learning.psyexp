@@ -786,7 +786,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Short Preparation session. &amp;#10;&amp;#10;You will see pairs of symbols.&amp;#10;You must choose either the left (C) or the right (M) symbol. &amp;#10;&amp;#10;You will be collecting points. &amp;#10;&amp;#10;One symbol is more likely to give you 10 points.&amp;#10;The other symbol is more likely to take away 10 points. &amp;#10;&amp;#10;Choose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.&amp;#10;&amp;#10;&amp;#10;Press any key to continue.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Short Preparation session. &amp;#10;&amp;#10;You will be collecting points.&amp;#10;&amp;#10;Choose one symbol either on the left (C) or the right (M). &amp;#10;&amp;#10;One symbol is more likely to give you 10 points.&amp;#10;The other symbol is more likely to take away 10 points. &amp;#10;&amp;#10;Choose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.&amp;#10;&amp;#10;&amp;#10;Press any key to continue.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>

@@ -144,7 +144,7 @@ function experimentInit() {
   instr1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'instr1',
-    text: 'Short Preparation session. \n\nYou will see pairs of symbols.\nYou must choose either the left (C) or the right (M) symbol. \n\nYou will be collecting points. \n\nOne symbol is more likely to give you 10 points.\nThe other symbol is more likely to take away 10 points. \n\nChoose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.\n\n\nPress any key to continue.\n',
+    text: 'Short Preparation session. \n\nYou will be collecting points.\n\nChoose one symbol either on the left (C) or the right (M). \n\nOne symbol is more likely to give you 10 points.\nThe other symbol is more likely to take away 10 points. \n\nChoose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.\n\n\nPress any key to continue.\n',
     font: 'Arial',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
