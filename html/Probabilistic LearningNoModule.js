@@ -34,6 +34,9 @@ flowScheduler.add(experimentInit);
 flowScheduler.add(WelcomeRoutineBegin);
 flowScheduler.add(WelcomeRoutineEachFrame);
 flowScheduler.add(WelcomeRoutineEnd);
+flowScheduler.add(Prep_InstructionRoutineBegin);
+flowScheduler.add(Prep_InstructionRoutineEachFrame);
+flowScheduler.add(Prep_InstructionRoutineEnd);
 const preparationLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(preparationLoopBegin, preparationLoopScheduler);
 flowScheduler.add(preparationLoopScheduler);
@@ -76,6 +79,8 @@ function updateInfo() {
 
 var WelcomeClock;
 var text;
+var Prep_InstructionClock;
+var instr1;
 var prepClock;
 var fixation0;
 var letter0_1;
@@ -131,6 +136,19 @@ function experimentInit() {
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  // Initialize components for Routine "Prep_Instruction"
+  Prep_InstructionClock = new util.Clock();
+  instr1 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'instr1',
+    text: 'Short Preparation Phase. \n\nYou will be shown pairs of symbols and must choose either the left or the right symbol. \nY\nou will be collecting points. \n\nOne of the two symbols is more likely to give you 10 points.\nThe other symbol is more likely to take away 10 points. \n\nChoose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.\n\n\nPress any key to continue.\n',
+    font: 'Arial',
+    units : undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -494,6 +512,124 @@ function WelcomeRoutineEnd() {
       }
   
   // the Routine "Welcome" was not non-slip safe, so reset the non-slip timer
+  routineTimer.reset();
+  
+  return Scheduler.Event.NEXT;
+}
+
+var intr0_resp;
+var Prep_InstructionComponents;
+function Prep_InstructionRoutineBegin() {
+  //------Prepare to start Routine 'Prep_Instruction'-------
+  t = 0;
+  Prep_InstructionClock.reset(); // clock
+  frameN = -1;
+  // update component parameters for each repeat
+  intr0_resp = new core.BuilderKeyResponse(psychoJS);
+  
+  // keep track of which components have finished
+  Prep_InstructionComponents = [];
+  Prep_InstructionComponents.push(instr1);
+  Prep_InstructionComponents.push(intr0_resp);
+  
+  Prep_InstructionComponents.forEach( function(thisComponent) {
+    if ('status' in thisComponent)
+      thisComponent.status = PsychoJS.Status.NOT_STARTED;
+     });
+  
+  return Scheduler.Event.NEXT;
+}
+
+
+function Prep_InstructionRoutineEachFrame() {
+  //------Loop for each frame of Routine 'Prep_Instruction'-------
+  let continueRoutine = true; // until we're told otherwise
+  // get current time
+  t = Prep_InstructionClock.getTime();
+  frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+  // update/draw components on each frame
+  
+  // *instr1* updates
+  if (t >= 0.0 && instr1.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    instr1.tStart = t;  // (not accounting for frame time here)
+    instr1.frameNStart = frameN;  // exact frame index
+    instr1.setAutoDraw(true);
+  }
+
+  
+  // *intr0_resp* updates
+  if (t >= 0.0 && intr0_resp.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    intr0_resp.tStart = t;  // (not accounting for frame time here)
+    intr0_resp.frameNStart = frameN;  // exact frame index
+    intr0_resp.status = PsychoJS.Status.STARTED;
+    // keyboard checking is just starting
+    psychoJS.window.callOnFlip(function() { intr0_resp.clock.reset(); }); // t = 0 on screen flip
+    psychoJS.eventManager.clearEvents({eventType:'keyboard'});
+  }
+
+  if (intr0_resp.status === PsychoJS.Status.STARTED) {
+    let theseKeys = psychoJS.eventManager.getKeys();
+    
+    // check for quit:
+    if (theseKeys.indexOf('escape') > -1) {
+      psychoJS.experiment.experimentEnded = true;
+    }
+    
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      intr0_resp.keys = theseKeys[theseKeys.length-1];  // just the last key pressed
+      intr0_resp.rt = intr0_resp.clock.getTime();
+      // a response ends the routine
+      continueRoutine = false;
+    }
+  }
+  
+  // check for quit (typically the Esc key)
+  if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+    return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
+  }
+  
+  // check if the Routine should terminate
+  if (!continueRoutine) {  // a component has requested a forced-end of Routine
+    return Scheduler.Event.NEXT;
+  }
+  
+  continueRoutine = false;  // reverts to True if at least one component still running
+  Prep_InstructionComponents.forEach( function(thisComponent) {
+    if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+      continueRoutine = true;
+    }});
+  
+  // refresh the screen if continuing
+  if (continueRoutine) {
+    return Scheduler.Event.FLIP_REPEAT;
+  }
+  else {
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function Prep_InstructionRoutineEnd() {
+  //------Ending Routine 'Prep_Instruction'-------
+  Prep_InstructionComponents.forEach( function(thisComponent) {
+    if (typeof thisComponent.setAutoDraw === 'function') {
+      thisComponent.setAutoDraw(false);
+    }});
+  
+  // check responses
+  if (intr0_resp.keys === undefined || intr0_resp.keys.length === 0) {    // No response was made
+      intr0_resp.keys = undefined;
+  }
+  
+  psychoJS.experiment.addData('intr0_resp.keys', intr0_resp.keys);
+  if (typeof intr0_resp.keys !== 'undefined') {  // we had a response
+      psychoJS.experiment.addData('intr0_resp.rt', intr0_resp.rt);
+      routineTimer.reset();
+      }
+  
+  // the Routine "Prep_Instruction" was not non-slip safe, so reset the non-slip timer
   routineTimer.reset();
   
   return Scheduler.Event.NEXT;

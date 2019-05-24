@@ -765,9 +765,54 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="Prep_Instruction">
+      <TextComponent name="instr1">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="instr1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Short Preparation Phase. &amp;#10;&amp;#10;You will be shown pairs of symbols and must choose either the left or the right symbol. &amp;#10;Y&amp;#10;ou will be collecting points. &amp;#10;&amp;#10;One of the two symbols is more likely to give you 10 points.&amp;#10;The other symbol is more likely to take away 10 points. &amp;#10;&amp;#10;Choose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.&amp;#10;&amp;#10;&amp;#10;Press any key to continue.&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="intr0_resp">
+        <Param name="allowedKeys" updates="constant" val="" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="intr0_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="Welcome"/>
+    <Routine name="Prep_Instruction"/>
     <LoopInitiator loopType="TrialHandler" name="preparation">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('letter10', 'U'), ('letter20', 'L'), ('corrAns0', 'c'), ('letterA0', 'c'), ('letterC0', None), ('letterE0', None)]), OrderedDict([('letter10', 'U'), ('letter20', 'L'), ('corrAns0', 'c'), ('letterA0', 'c'), ('letterC0', None), ('letterE0', None)]), OrderedDict([('letter10', 'L'), ('letter20', 'U'), ('corrAns0', 'm'), ('letterA0', 'm'), ('letterC0', None), ('letterE0', None)]), OrderedDict([('letter10', 'L'), ('letter20', 'U'), ('corrAns0', 'm'), ('letterA0', 'm'), ('letterC0', None), ('letterE0', None)]), OrderedDict([('letter10', 'U'), ('letter20', 'L'), ('corrAns0', 'c'), ('letterA0', 'c'), ('letterC0', None), ('letterE0', None)]), OrderedDict([('letter10', 'J'), ('letter20', 'N'), ('corrAns0', 'c'), ('letterA0', None), ('letterC0', 'c'), ('letterE0', None)]), OrderedDict([('letter10', 'J'), ('letter20', 'N'), ('corrAns0', 'c'), ('letterA0', None), ('letterC0', 'c'), ('letterE0', None)]), OrderedDict([('letter10', 'N'), ('letter20', 'J'), ('corrAns0', 'm'), ('letterA0', None), ('letterC0', 'm'), ('letterE0', None)]), OrderedDict([('letter10', 'N'), ('letter20', 'J'), ('corrAns0', 'm'), ('letterA0', None), ('letterC0', 'm'), ('letterE0', None)]), OrderedDict([('letter10', 'J'), ('letter20', 'N'), ('corrAns0', 'm'), ('letterA0', None), ('letterC0', 'c'), ('letterE0', None)]), OrderedDict([('letter10', 'Z'), ('letter20', 'r'), ('corrAns0', 'c'), ('letterA0', None), ('letterC0', None), ('letterE0', 'c')]), OrderedDict([('letter10', 'Z'), ('letter20', 'r'), ('corrAns0', 'c'), ('letterA0', None), ('letterC0', None), ('letterE0', 'c')]), OrderedDict([('letter10', 'r'), ('letter20', 'Z'), ('corrAns0', 'm'), ('letterA0', None), ('letterC0', None), ('letterE0', 'm')]), OrderedDict([('letter10', 'r'), ('letter20', 'Z'), ('corrAns0', 'c'), ('letterA0', None), ('letterC0', None), ('letterE0', 'm')]), OrderedDict([('letter10', 'Z'), ('letter20', 'r'), ('corrAns0', 'm'), ('letterA0', None), ('letterC0', None), ('letterE0', 'c')])]" valType="str"/>
