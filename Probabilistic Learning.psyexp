@@ -566,7 +566,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Training Phase &amp;#10;&amp;#10;You will be shown pairs of symbols and must choose either the left or right symbol. &amp;#10;Use   C     and    M     to make your choices.&amp;#10;When you choose a symbol, you will either win or lose points. &amp;#10;One of the two symbols in each pair is more likely to give you points.&amp;#10;Choose the symbols that give you points and avoid the symbols  that make you lose points. &amp;#10;&amp;#10;Press any key to begin.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Training Session&amp;#10;&amp;#10;You will see 3 pairs of characters. &amp;#10;&amp;#10;In each pair, one symbol is more PROBABLE to give you points. &amp;#10;&amp;#10;Identify those symbols and choose them.&amp;#10;Avoid symbols that make you lose points. &amp;#10;&amp;#10;Use buttons:&amp;#10;left(C)     right(M)&amp;#10;to make your choices. &amp;#10;&amp;#10;&amp;#10;Press any key to begin.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -654,7 +654,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The practice phase is now finished.&amp;#10;&amp;#10;You may have noticed that one of the symbols was more likely to give you points. &amp;#10;&amp;#10;This was not always the case. &amp;#10;&amp;#10;In the next session you will be presented with 3 pairs of characters. &amp;#10;&amp;#10;In each pair, one symbol is more likely to give you points. &amp;#10;&amp;#10;You should try to identify those symbols and choose them.&amp;#10;Avoid symbols that make you lose points. &amp;#10;&amp;#10;Use buttons:&amp;#10;C                    M&amp;#10;to make your choices. &amp;#10;&amp;#10;Press any key to continue." valType="str"/>
+        <Param name="text" updates="constant" val="The practice phase is now finished.&amp;#10;&amp;#10;You may have noticed that one of the symbols was more likely to give you points. &amp;#10;&amp;#10;This was not always the case. &amp;#10;&amp;#10;It was more PROBABLE that one symbol gave you points. &amp;#10;&amp;#10;&amp;#10;Press any key to continue. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -774,7 +774,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
         <Param name="name" updates="None" val="instr1" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>

@@ -155,7 +155,7 @@ function experimentInit() {
     text: 'Short Preparation session. \n\nYou will be collecting points.\n\nChoose one symbol either on the left (C) or the right (M). \n\nOne symbol is more likely to give you 10 points.\nThe other symbol is more likely to take away 10 points. \n\nChoose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.\n\n\nPress any key to continue.\n',
     font: 'Arial',
     units : undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -213,7 +213,7 @@ function experimentInit() {
   prep_outro = new visual.TextStim({
     win: psychoJS.window,
     name: 'prep_outro',
-    text: 'The practice phase is now finished.\n\nYou may have noticed that one of the symbols was more likely to give you points. \n\nThis was not always the case. \n\nIn the next session you will be presented with 3 pairs of characters. \n\nIn each pair, one symbol is more likely to give you points. \n\nYou should try to identify those symbols and choose them.\nAvoid symbols that make you lose points. \n\nUse buttons:\nC                    M\nto make your choices. \n\nPress any key to continue.',
+    text: 'The practice phase is now finished.\n\nYou may have noticed that one of the symbols was more likely to give you points. \n\nThis was not always the case. \n\nIt was more PROBABLE that one symbol gave you points. \n\n\nPress any key to continue. ',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -229,7 +229,7 @@ function experimentInit() {
   pract_intr = new visual.TextStim({
     win: psychoJS.window,
     name: 'pract_intr',
-    text: 'Training Phase \n\nYou will be shown pairs of symbols and must choose either the left or right symbol. \nUse   C     and    M     to make your choices.\nWhen you choose a symbol, you will either win or lose points. \nOne of the two symbols in each pair is more likely to give you points.\nChoose the symbols that give you points and avoid the symbols  that make you lose points. \n\nPress any key to begin.\n',
+    text: 'Training Session\n\nYou will see 3 pairs of characters. \n\nIn each pair, one symbol is more PROBABLE to give you points. \n\nIdentify those symbols and choose them.\nAvoid symbols that make you lose points. \n\nUse buttons:\nleft(C)     right(M)\nto make your choices. \n\n\nPress any key to begin.\n',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
