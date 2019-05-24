@@ -1,0 +1,15 @@
+welc_resp.keys,welc_resp.rt,instr0_resp.keys,instr0_resp.rt,prep_resp.keys,prep_resp.corr,prep_resp.rt,preparation.thisRepN,preparation.thisTrialN,preparation.thisN,preparation.thisIndex,preparation.ran,preparation.order,letter10,letter20,corrAns0,participant,,date,expName,psychopyVersion,frameRate,outro_resp.keys,outro_resp.rt,instr1_resp.keys,instr1_resp.rt,resp.keys,resp.corr,resp.rt,letterMaster.thisRepN,letterMaster.thisTrialN,letterMaster.thisN,letterMaster.thisIndex,letterMaster.ran,letterMaster.order,letterset,letterset2,practice.thisRepN,practice.thisTrialN,practice.thisN,practice.thisIndex,practice.ran,practice.order,letter1,letter2,corrAns,letterA,letterC,letterE
+space,1.083,space,0.536,m,1,0.306,1,0,10,7,1,9,L,U,m,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,c,1,0.314,1,0,10,5,1,9,U,L,c,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,c,1,0.296,1,0,10,4,1,9,U,L,c,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,c,1,0.297,1,0,10,1,1,9,U,L,c,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,m,1,0.297,1,0,10,3,1,9,L,U,m,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,c,1,0.297,1,0,10,0,1,9,U,L,c,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,m,0,0.296,1,0,10,8,1,9,L,U,c,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,m,1,0.362,1,0,10,2,1,9,L,U,m,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,c,1,0.295,1,0,10,6,1,9,U,L,c,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,c,0,0.33,1,0,10,9,1,9,U,L,m,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,space,0.626,space,0.635,m,0,0.528,1,0,6,1,1,5,hiragana2.xlsx,hiragana21.xlsx,6,0,180,17,1,179,b,o,c,,m,
+,,,,,,,,,,,,,,,,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,c,1,0.48,1,0,6,1,1,5,hiragana2.xlsx,hiragana21.xlsx,6,0,180,13,1,179,o,b,c,,c,
+,,,,,,,,,,,,,,,,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,c,1,0.443,1,0,6,1,1,5,hiragana2.xlsx,hiragana21.xlsx,6,0,180,3,1,179,s,J,c,c,,
+,,,,,,,,,,,,,,,,,,2019-05-23_19h39.07.817,Probabilistic Learning,3.1.0,60,,,,,,0,,1,0,6,1,1,5,hiragana2.xlsx,hiragana21.xlsx,6,0,180,25,1,179,W,V,m,,,m
