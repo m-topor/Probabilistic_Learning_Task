@@ -235,7 +235,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, 0.06], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -257,7 +257,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, (- 0.06)], height: 0.08,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.1)], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -434,7 +434,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, 0.06], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -456,7 +456,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, (- 0.06)], height: 0.08,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.1)], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -1349,7 +1349,7 @@ function Learning_CheckRoutineBegin() {
   // update component parameters for each repeat
   quest.setText(question);
   letter_string.setText(learnt_letters);
-  number_string.setText(numbers);
+  number_string.setText('1    2    3    4    5    6');
   learnt_resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
