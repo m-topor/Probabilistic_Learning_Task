@@ -185,7 +185,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.15,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -196,7 +196,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.15,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -277,7 +277,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.15,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -288,7 +288,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.15,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -362,7 +362,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [(- 0.1), 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.1), 0], height: 0.15,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -373,7 +373,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [0.1, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0.1, 0], height: 0.15,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -383,7 +383,7 @@ function experimentInit() {
   check = new visual.TextStim({
     win: psychoJS.window,
     name: 'check',
-    text: 'Thank you!\n\nNow think about the symbols you saw. \n\nYou will be asked to indicate which symbol you thought was the most likely to give you extra points. \n\nYou will then indicate which symbol was the least likely to give you points. \n\nYou will do this by using numbers 1-6 on top of the keyboard.\n1  2  3  4  5  or  6\nUse the numbers to identify the letter of your choice. \n\n\nPress any key to continue.',
+    text: 'Well done!\n\nNow think about the symbols you saw. \n\nWhich symbol was the MOST likely to give you ponts? \n\nWhich symbol was the LEAST likely to give you points? \n\nOn the next screen, use numbers:\n1  2  3  4  5  or  6 on top of the keyboard.\n\nIdentify the symbols of your choice. \n\n\nPress any key to continue.',
     font: 'Arial',
     units : undefined, 
     pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
