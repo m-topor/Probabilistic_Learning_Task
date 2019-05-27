@@ -139,7 +139,7 @@ function experimentInit() {
   text = new visual.TextStim({
     win: psychoJS.window,
     name: 'text',
-    text: '\nPlease follow the instructions on the following screens.\n\n\nTo select a symbol on a given side of the screen, use the keys below:\n\nLeft  side =  C          Right side = M\n\n\nPress any key to continue.\n',
+    text: '\nPlease follow the instructions on the following screens.\n\n\nTo select a symbol on a given side of the screen, use the keys below:\n\nLeft  side =  C          Right side = M\n\n\nPress any key to continue. xxx\n',
     font: 'Calibri',
     units : undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
