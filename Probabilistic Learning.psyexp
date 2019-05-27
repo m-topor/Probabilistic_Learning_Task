@@ -257,7 +257,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (myCount &gt; 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="&amp;#10;&amp;#10;if (test_resp.keys == pickA):&amp;#10;    posLB = 1&amp;#10;else:&amp;#10;    posLB = 0&amp;#10;&amp;#10;if (test_resp.keys == avoidB):&amp;#10;    negLB = 1&amp;#10;else:&amp;#10;    negLB = 0&amp;#10;&amp;#10;&amp;#10;test.addData('jitter', jitter)&amp;#10;&amp;#10;&amp;#10;test.addData('posLB', posLB)&amp;#10;test.addData('negLB', negLB)&amp;#10;&amp;#10;if myCount &gt; 3:&amp;#10;    letterMaster.finished = True" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_3" valType="code"/>
@@ -534,7 +534,7 @@
       <CodeComponent name="code_6">
         <Param name="Begin Experiment" updates="constant" val="myCount = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="myCount = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if (myCount &gt; 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if (myCount === 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if myCount == 3:&amp;#10;    letterMaster.finished = True&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>

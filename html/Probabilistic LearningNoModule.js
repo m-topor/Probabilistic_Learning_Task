@@ -1195,7 +1195,7 @@ function Practice_InstructionRoutineBegin() {
   // update component parameters for each repeat
   myCount = myCount + 1
   
-  if (myCount > 1){
+  if (myCount === 1){
       letterMaster.finished = true;
   }
   instr1_resp = new core.BuilderKeyResponse(psychoJS);
@@ -2075,9 +2075,6 @@ function test_trialRoutineEnd() {
     if (typeof thisComponent.setAutoDraw === 'function') {
       thisComponent.setAutoDraw(false);
     }});
-  if (myCount > 1){
-      letterMaster.finished = true;
-  }
   
   // check responses
   if (test_resp.keys === undefined || test_resp.keys.length === 0) {    // No response was made
