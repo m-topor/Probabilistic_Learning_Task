@@ -966,7 +966,7 @@
     <Routine name="Prep_over"/>
     <LoopInitiator loopType="TrialHandler" name="letterMaster">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('letterset', 'hiragana1.xlsx'), ('letterset2', 'hiragana11.xlsx')]), OrderedDict([('letterset', 'hiragana2.xlsx'), ('letterset2', 'hiragana21.xlsx')]), OrderedDict([('letterset', 'hiragana3.xlsx'), ('letterset2', 'hiragana31.xlsx')]), OrderedDict([('letterset', 'hiragana4.xlsx'), ('letterset2', 'hiragana41.xlsx')]), OrderedDict([('letterset', 'hiragana5.xlsx'), ('letterset2', 'hiragana51.xlsx')]), OrderedDict([('letterset', 'hiragana6.xlsx'), ('letterset2', 'hiragana61.xlsx')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('letterset', 'hiragana1.xlsx'), ('letterset2', 'hiragana11.xlsx'), ('letterset3', 'hiragana12.xlsx')]), OrderedDict([('letterset', 'hiragana2.xlsx'), ('letterset2', 'hiragana21.xlsx'), ('letterset3', 'hiragana22.xlsx')]), OrderedDict([('letterset', 'hiragana3.xlsx'), ('letterset2', 'hiragana31.xlsx'), ('letterset3', 'hiragana32.xlsx')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="letterchoice.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
