@@ -534,7 +534,7 @@
       <CodeComponent name="code_6">
         <Param name="Begin Experiment" updates="constant" val="myCount = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="myCount = 0&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if (myCount === 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if (myCount === 1){&amp;#10;    letterMaster.finished = true;&amp;#10;}&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="myCount = myCount + 1&amp;#10;&amp;#10;if myCount == 3:&amp;#10;    letterMaster.finished = True&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>

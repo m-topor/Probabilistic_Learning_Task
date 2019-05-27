@@ -1190,6 +1190,8 @@ function Practice_InstructionRoutineBegin() {
   if (myCount === 1){
       letterMaster.finished = true;
   }
+  
+  
   instr1_resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
