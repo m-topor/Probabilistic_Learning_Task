@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on May 24, 2019, at 21:30
+    on May 27, 2019, at 18:18
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -71,7 +71,7 @@ else:
 # Initialize components for Routine "Welcome"
 WelcomeClock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='\nPlease follow the instructions on the following screens.\n\n\nTo select a symbol on a given side of the screen, use the keys below:\n\nLeft  side =  C          Right side = M\n\n\nPress any key to continue.\n',
+    text='\nPlease follow the instructions on the following screens.\n\n\nTo select a symbol on a given side of the screen, use the keys below:\n\nLeft  side =  C          Right side = M\n\n\nPress any key to continue. \n',
     font='Calibri',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -81,9 +81,9 @@ text = visual.TextStim(win=win, name='text',
 # Initialize components for Routine "Prep_Instruction"
 Prep_InstructionClock = core.Clock()
 instr1 = visual.TextStim(win=win, name='instr1',
-    text='Short Preparation Phase. \n\nYou will be shown pairs of symbols and must choose either the left or right symbol. \nThroughout the task you will be collecting points. \n\nOne of the two symbols is more likely to give you 10 points.\nThe other symbol is more likely to take away 10 points. \n\nChoose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.\n\n\nPress any key to continue.\n',
-    font='Calibri',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    text='Short Preparation session. \n\nYou will be collecting points.\n\nChoose one symbol either on the left (C) or the right (M). \n\nOne symbol is more likely to give you 10 points.\nThe other symbol is more likely to take away 10 points. \n\nChoose the symbol that is the most likely to give you points and avoid the symbol that makes you lose points.\n\n\nPress any key to continue.\n',
+    font='Arial',
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -125,12 +125,36 @@ prep_feedb = visual.TextStim(win=win, name='prep_feedb',
 # Initialize components for Routine "Prep_over"
 Prep_overClock = core.Clock()
 prep_outro = visual.TextStim(win=win, name='prep_outro',
-    text='The practice phase is now finished.\n\nYou may have noticed that one of the symbols was more likely to give you points. \n\nThis was not always the case. \n\nIn the next session you will be presented with 3 pairs of characters. \n\nIn each pair, one symbol is more likely to give you points. \n\nYou should try to identify those symbols and choose them.\nAvoid symbols that make you lose points. \n\nUse buttons:\nC                    M\nto make your choices. \n\nPress any key to continue.',
+    text='The practice session is now finished.\n\nYou may have noticed that one of the symbols was more likely to give you points. \n\nThis was not always the case. \n\nIt was more PROBABLE that one symbol gave you points. \n\n\nPress any key to continue. ',
     font='Calibri',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
+
+# Initialize components for Routine "Learning_Check"
+Learning_CheckClock = core.Clock()
+quest = visual.TextStim(win=win, name='quest',
+    text='default text',
+    font='Arial',
+    pos=(0, 0.6), height=0.15, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+letter_string = visual.TextStim(win=win, name='letter_string',
+    text='default text',
+    font='hiragana tfb',
+    pos=(0, 0.1), height=0.25, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
+number_string = visual.TextStim(win=win, name='number_string',
+    text='default text',
+    font='Arial',
+    pos=(0, -0.2), height=0.2, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-2.0);
 
 # Initialize components for Routine "Practice_Instruction"
 Practice_InstructionClock = core.Clock()
@@ -138,7 +162,7 @@ myCount = 0
 
 
 pract_intr = visual.TextStim(win=win, name='pract_intr',
-    text='Training Phase \n\nYou will be shown pairs of symbols and must choose either the left or right symbol. \nUse   C     and    M     to make your choices.\nWhen you choose a symbol, you will either win or lose points. \nOne of the two symbols in each pair is more likely to give you points.\nChoose the symbols that give you points and avoid the symbols  that make you lose points. \n\nPress any key to begin.\n',
+    text='Training Session\n\nYou will see 3 pairs of symbols. \n\nIn each pair, one symbol is more PROBABLE to give you points. \n\nIdentify those symbols and choose them.\nAvoid symbols that make you lose points. \n\nUse buttons:\nleft(C)            right(M)\nto make your choices. \n\n\nPress any key to begin.\n',
     font='Calibri',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -213,7 +237,7 @@ feedb = visual.TextStim(win=win, name='feedb',
 # Initialize components for Routine "Practice_over"
 Practice_overClock = core.Clock()
 instr2 = visual.TextStim(win=win, name='instr2',
-    text='The training phase is now finished. Press any key to continue onto the next section.\n',
+    text='The training session is now finished. \n\nPress any key to continue onto the next section.\n',
     font='Calibri',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -223,9 +247,9 @@ instr2 = visual.TextStim(win=win, name='instr2',
 # Initialize components for Routine "Test_Instr"
 Test_InstrClock = core.Clock()
 instr3 = visual.TextStim(win=win, name='instr3',
-    text='Test Phase\n\nYou will again be shown pairs of symbols to choose from. \nThese are the symbols which you just trained on, but in different order and combination. \nUse   C     and    M     to make your choices.\n\nAs this is the Test Phase no information about gaining or losing points will be given. \n\nRemember to choose the symbols that are the most likely to give you extra points and avoid the symbols that are the most likely to make you lose points. \nIf you are unsure go with your gut feeling.\n\nPress any key to begin.\n',
+    text='Test Session\n\nYou will see the same symbols again. \n\nNow, in different order and combination. \n\nPick the symbol that is the most PROBABLE to give you points.\nAvoid the symbol that makes you lose points.\n\nUse buttons:\nleft(C)            right(M)\n\nMake your decision as quickly as you can.\nIf you are unsure go with your gut feeling.\n\n\nPress any key to begin.\n',
     font='Calibri',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -256,6 +280,40 @@ letter2_2 = visual.TextStim(win=win, name='letter2_2',
     languageStyle='LTR',
     depth=-3.0);
 
+# Initialize components for Routine "check_instr"
+check_instrClock = core.Clock()
+check = visual.TextStim(win=win, name='check',
+    text='Thank you!\nNow think about the symbols you saw. \n\nYou will be asked to indicate which symbol you thought was the most likely to give you extra points. \nYou will then indicate which symbol was the least likely to give you points. \n\nYou will do this by using numbers 1-6 on the keyboard.\nUse the numbers to identify the letter of your choice. \n\n\nPress any key to continue.',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+
+# Initialize components for Routine "Learning_Check"
+Learning_CheckClock = core.Clock()
+quest = visual.TextStim(win=win, name='quest',
+    text='default text',
+    font='Arial',
+    pos=(0, 0.6), height=0.15, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+letter_string = visual.TextStim(win=win, name='letter_string',
+    text='default text',
+    font='hiragana tfb',
+    pos=(0, 0.1), height=0.25, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
+number_string = visual.TextStim(win=win, name='number_string',
+    text='default text',
+    font='Arial',
+    pos=(0, -0.2), height=0.2, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-2.0);
+
 # Initialize components for Routine "test_over"
 test_overClock = core.Clock()
 t_outro = visual.TextStim(win=win, name='t_outro',
@@ -264,12 +322,12 @@ t_outro = visual.TextStim(win=win, name='t_outro',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=0.0);
 
 # Initialize components for Routine "task_over"
 task_overClock = core.Clock()
 task_outro = visual.TextStim(win=win, name='task_outro',
-    text='Thank you, the learning task is now finished.',
+    text='Thank you, the learning task is now finished.\n\nYou can press Esc to exit the full screen. \n\nYou can then close this window. ',
     font='Calibri',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -376,9 +434,9 @@ Prep_InstructionClock.reset()  # clock
 frameN = -1
 continueRoutine = True
 # update component parameters for each repeat
-instr0_resp = keyboard.Keyboard()
+intr0_resp = keyboard.Keyboard()
 # keep track of which components have finished
-Prep_InstructionComponents = [instr1, instr0_resp]
+Prep_InstructionComponents = [instr1, intr0_resp]
 for thisComponent in Prep_InstructionComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -402,29 +460,28 @@ while continueRoutine:
         win.timeOnFlip(instr1, 'tStartRefresh')  # time at next scr refresh
         instr1.setAutoDraw(True)
     
-    # *instr0_resp* updates
-    if t >= 0.0 and instr0_resp.status == NOT_STARTED:
+    # *intr0_resp* updates
+    if t >= 0.0 and intr0_resp.status == NOT_STARTED:
         # keep track of start time/frame for later
-        instr0_resp.tStart = t  # not accounting for scr refresh
-        instr0_resp.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(instr0_resp, 'tStartRefresh')  # time at next scr refresh
-        instr0_resp.status = STARTED
+        intr0_resp.tStart = t  # not accounting for scr refresh
+        intr0_resp.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(intr0_resp, 'tStartRefresh')  # time at next scr refresh
+        intr0_resp.status = STARTED
         # keyboard checking is just starting
-        win.callOnFlip(instr0_resp.clock.reset)  # t=0 on next screen flip
-        instr0_resp.clearEvents(eventType='keyboard')
-    if instr0_resp.status == STARTED:
-        theseKeys = instr0_resp.getKeys(keyList=None, waitRelease=False)
+        win.callOnFlip(intr0_resp.clock.reset)  # t=0 on next screen flip
+        intr0_resp.clearEvents(eventType='keyboard')
+    if intr0_resp.status == STARTED:
+        theseKeys = intr0_resp.getKeys(keyList=None, waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
             
             # check for quit:
             if "escape" == theseKeys:
                 endExpNow = True
-            if instr0_resp.keys == []:  # then this was the first keypress
-                instr0_resp.keys = theseKeys.name  # just the first key pressed
-                instr0_resp.rt = theseKeys.rt
-                # a response ends the routine
-                continueRoutine = False
+            intr0_resp.keys = theseKeys.name  # just the last key pressed
+            intr0_resp.rt = theseKeys.rt
+            # a response ends the routine
+            continueRoutine = False
     
     # check for quit (typically the Esc key)
     if endExpNow or keyboard.Keyboard().getKeys(keyList=["escape"]):
@@ -450,13 +507,13 @@ for thisComponent in Prep_InstructionComponents:
 thisExp.addData('instr1.started', instr1.tStartRefresh)
 thisExp.addData('instr1.stopped', instr1.tStopRefresh)
 # check responses
-if instr0_resp.keys in ['', [], None]:  # No response was made
-    instr0_resp.keys = None
-thisExp.addData('instr0_resp.keys',instr0_resp.keys)
-if instr0_resp.keys != None:  # we had a response
-    thisExp.addData('instr0_resp.rt', instr0_resp.rt)
-thisExp.addData('instr0_resp.started', instr0_resp.tStartRefresh)
-thisExp.addData('instr0_resp.stopped', instr0_resp.tStopRefresh)
+if intr0_resp.keys in ['', [], None]:  # No response was made
+    intr0_resp.keys = None
+thisExp.addData('intr0_resp.keys',intr0_resp.keys)
+if intr0_resp.keys != None:  # we had a response
+    thisExp.addData('intr0_resp.rt', intr0_resp.rt)
+thisExp.addData('intr0_resp.started', intr0_resp.tStartRefresh)
+thisExp.addData('intr0_resp.stopped', intr0_resp.tStopRefresh)
 thisExp.nextEntry()
 # the Routine "Prep_Instruction" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
@@ -818,6 +875,141 @@ for thisLetterMaster in letterMaster:
     if thisLetterMaster != None:
         for paramName in thisLetterMaster:
             exec('{} = thisLetterMaster[paramName]'.format(paramName))
+    
+    # set up handler to look after randomisation of conditions etc
+    trials_2 = data.TrialHandler(nReps=1, method='sequential', 
+        extraInfo=expInfo, originPath=-1,
+        trialList=data.importConditions(letterset3),
+        seed=None, name='trials_2')
+    thisExp.addLoop(trials_2)  # add the loop to the experiment
+    thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+    if thisTrial_2 != None:
+        for paramName in thisTrial_2:
+            exec('{} = thisTrial_2[paramName]'.format(paramName))
+    
+    for thisTrial_2 in trials_2:
+        currentLoop = trials_2
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+        if thisTrial_2 != None:
+            for paramName in thisTrial_2:
+                exec('{} = thisTrial_2[paramName]'.format(paramName))
+        
+        # ------Prepare to start Routine "Learning_Check"-------
+        t = 0
+        Learning_CheckClock.reset()  # clock
+        frameN = -1
+        continueRoutine = True
+        # update component parameters for each repeat
+        quest.setText(question)
+        letter_string.setText(learnt_letters)
+        number_string.setText(numbers)
+        learnt_resp = keyboard.Keyboard()
+        # keep track of which components have finished
+        Learning_CheckComponents = [quest, letter_string, number_string, learnt_resp]
+        for thisComponent in Learning_CheckComponents:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        
+        # -------Start Routine "Learning_Check"-------
+        while continueRoutine:
+            # get current time
+            t = Learning_CheckClock.getTime()
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *quest* updates
+            if t >= 0.0 and quest.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                quest.tStart = t  # not accounting for scr refresh
+                quest.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(quest, 'tStartRefresh')  # time at next scr refresh
+                quest.setAutoDraw(True)
+            
+            # *letter_string* updates
+            if t >= 0.0 and letter_string.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                letter_string.tStart = t  # not accounting for scr refresh
+                letter_string.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letter_string, 'tStartRefresh')  # time at next scr refresh
+                letter_string.setAutoDraw(True)
+            
+            # *number_string* updates
+            if t >= 0.0 and number_string.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                number_string.tStart = t  # not accounting for scr refresh
+                number_string.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(number_string, 'tStartRefresh')  # time at next scr refresh
+                number_string.setAutoDraw(True)
+            
+            # *learnt_resp* updates
+            if t >= 0.0 and learnt_resp.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                learnt_resp.tStart = t  # not accounting for scr refresh
+                learnt_resp.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(learnt_resp, 'tStartRefresh')  # time at next scr refresh
+                learnt_resp.status = STARTED
+                # keyboard checking is just starting
+                win.callOnFlip(learnt_resp.clock.reset)  # t=0 on next screen flip
+                learnt_resp.clearEvents(eventType='keyboard')
+            if learnt_resp.status == STARTED:
+                theseKeys = learnt_resp.getKeys(keyList=['1', '2', '3', '4', '5', '6'], waitRelease=False)
+                if len(theseKeys):
+                    theseKeys = theseKeys[0]  # at least one key was pressed
+                    
+                    # check for quit:
+                    if "escape" == theseKeys:
+                        endExpNow = True
+                    learnt_resp.keys = theseKeys.name  # just the last key pressed
+                    learnt_resp.rt = theseKeys.rt
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if endExpNow or keyboard.Keyboard().getKeys(keyList=["escape"]):
+                core.quit()
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in Learning_CheckComponents:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # -------Ending Routine "Learning_Check"-------
+        for thisComponent in Learning_CheckComponents:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        trials_2.addData('quest.started', quest.tStartRefresh)
+        trials_2.addData('quest.stopped', quest.tStopRefresh)
+        trials_2.addData('letter_string.started', letter_string.tStartRefresh)
+        trials_2.addData('letter_string.stopped', letter_string.tStopRefresh)
+        trials_2.addData('number_string.started', number_string.tStartRefresh)
+        trials_2.addData('number_string.stopped', number_string.tStopRefresh)
+        # check responses
+        if learnt_resp.keys in ['', [], None]:  # No response was made
+            learnt_resp.keys = None
+        trials_2.addData('learnt_resp.keys',learnt_resp.keys)
+        if learnt_resp.keys != None:  # we had a response
+            trials_2.addData('learnt_resp.rt', learnt_resp.rt)
+        trials_2.addData('learnt_resp.started', learnt_resp.tStartRefresh)
+        trials_2.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
+        # the Routine "Learning_Check" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+    # completed 1 repeats of 'trials_2'
+    
     
     # ------Prepare to start Routine "Practice_Instruction"-------
     t = 0
@@ -1629,6 +1821,230 @@ for thisLetterMaster in letterMaster:
         thisExp.nextEntry()
         
     # completed 2 repeats of 'test'
+    
+    
+    # ------Prepare to start Routine "check_instr"-------
+    t = 0
+    check_instrClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    check_resp = keyboard.Keyboard()
+    # keep track of which components have finished
+    check_instrComponents = [check, check_resp]
+    for thisComponent in check_instrComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "check_instr"-------
+    while continueRoutine:
+        # get current time
+        t = check_instrClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *check* updates
+        if t >= 0.0 and check.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            check.tStart = t  # not accounting for scr refresh
+            check.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(check, 'tStartRefresh')  # time at next scr refresh
+            check.setAutoDraw(True)
+        
+        # *check_resp* updates
+        if t >= 0.0 and check_resp.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            check_resp.tStart = t  # not accounting for scr refresh
+            check_resp.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(check_resp, 'tStartRefresh')  # time at next scr refresh
+            check_resp.status = STARTED
+            # keyboard checking is just starting
+            win.callOnFlip(check_resp.clock.reset)  # t=0 on next screen flip
+            check_resp.clearEvents(eventType='keyboard')
+        if check_resp.status == STARTED:
+            theseKeys = check_resp.getKeys(keyList=None, waitRelease=False)
+            if len(theseKeys):
+                theseKeys = theseKeys[0]  # at least one key was pressed
+                
+                # check for quit:
+                if "escape" == theseKeys:
+                    endExpNow = True
+                check_resp.keys = theseKeys.name  # just the last key pressed
+                check_resp.rt = theseKeys.rt
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or keyboard.Keyboard().getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in check_instrComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "check_instr"-------
+    for thisComponent in check_instrComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    letterMaster.addData('check.started', check.tStartRefresh)
+    letterMaster.addData('check.stopped', check.tStopRefresh)
+    # check responses
+    if check_resp.keys in ['', [], None]:  # No response was made
+        check_resp.keys = None
+    letterMaster.addData('check_resp.keys',check_resp.keys)
+    if check_resp.keys != None:  # we had a response
+        letterMaster.addData('check_resp.rt', check_resp.rt)
+    letterMaster.addData('check_resp.started', check_resp.tStartRefresh)
+    letterMaster.addData('check_resp.stopped', check_resp.tStopRefresh)
+    # the Routine "check_instr" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # set up handler to look after randomisation of conditions etc
+    trials = data.TrialHandler(nReps=1, method='sequential', 
+        extraInfo=expInfo, originPath=-1,
+        trialList=data.importConditions(letterset3),
+        seed=None, name='trials')
+    thisExp.addLoop(trials)  # add the loop to the experiment
+    thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+    if thisTrial != None:
+        for paramName in thisTrial:
+            exec('{} = thisTrial[paramName]'.format(paramName))
+    
+    for thisTrial in trials:
+        currentLoop = trials
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+        if thisTrial != None:
+            for paramName in thisTrial:
+                exec('{} = thisTrial[paramName]'.format(paramName))
+        
+        # ------Prepare to start Routine "Learning_Check"-------
+        t = 0
+        Learning_CheckClock.reset()  # clock
+        frameN = -1
+        continueRoutine = True
+        # update component parameters for each repeat
+        quest.setText(question)
+        letter_string.setText(learnt_letters)
+        number_string.setText(numbers)
+        learnt_resp = keyboard.Keyboard()
+        # keep track of which components have finished
+        Learning_CheckComponents = [quest, letter_string, number_string, learnt_resp]
+        for thisComponent in Learning_CheckComponents:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        
+        # -------Start Routine "Learning_Check"-------
+        while continueRoutine:
+            # get current time
+            t = Learning_CheckClock.getTime()
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *quest* updates
+            if t >= 0.0 and quest.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                quest.tStart = t  # not accounting for scr refresh
+                quest.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(quest, 'tStartRefresh')  # time at next scr refresh
+                quest.setAutoDraw(True)
+            
+            # *letter_string* updates
+            if t >= 0.0 and letter_string.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                letter_string.tStart = t  # not accounting for scr refresh
+                letter_string.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letter_string, 'tStartRefresh')  # time at next scr refresh
+                letter_string.setAutoDraw(True)
+            
+            # *number_string* updates
+            if t >= 0.0 and number_string.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                number_string.tStart = t  # not accounting for scr refresh
+                number_string.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(number_string, 'tStartRefresh')  # time at next scr refresh
+                number_string.setAutoDraw(True)
+            
+            # *learnt_resp* updates
+            if t >= 0.0 and learnt_resp.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                learnt_resp.tStart = t  # not accounting for scr refresh
+                learnt_resp.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(learnt_resp, 'tStartRefresh')  # time at next scr refresh
+                learnt_resp.status = STARTED
+                # keyboard checking is just starting
+                win.callOnFlip(learnt_resp.clock.reset)  # t=0 on next screen flip
+                learnt_resp.clearEvents(eventType='keyboard')
+            if learnt_resp.status == STARTED:
+                theseKeys = learnt_resp.getKeys(keyList=['1', '2', '3', '4', '5', '6'], waitRelease=False)
+                if len(theseKeys):
+                    theseKeys = theseKeys[0]  # at least one key was pressed
+                    
+                    # check for quit:
+                    if "escape" == theseKeys:
+                        endExpNow = True
+                    learnt_resp.keys = theseKeys.name  # just the last key pressed
+                    learnt_resp.rt = theseKeys.rt
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if endExpNow or keyboard.Keyboard().getKeys(keyList=["escape"]):
+                core.quit()
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in Learning_CheckComponents:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # -------Ending Routine "Learning_Check"-------
+        for thisComponent in Learning_CheckComponents:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        trials.addData('quest.started', quest.tStartRefresh)
+        trials.addData('quest.stopped', quest.tStopRefresh)
+        trials.addData('letter_string.started', letter_string.tStartRefresh)
+        trials.addData('letter_string.stopped', letter_string.tStopRefresh)
+        trials.addData('number_string.started', number_string.tStartRefresh)
+        trials.addData('number_string.stopped', number_string.tStopRefresh)
+        # check responses
+        if learnt_resp.keys in ['', [], None]:  # No response was made
+            learnt_resp.keys = None
+        trials.addData('learnt_resp.keys',learnt_resp.keys)
+        if learnt_resp.keys != None:  # we had a response
+            trials.addData('learnt_resp.rt', learnt_resp.rt)
+        trials.addData('learnt_resp.started', learnt_resp.tStartRefresh)
+        trials.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
+        # the Routine "Learning_Check" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+    # completed 1 repeats of 'trials'
     
     
     # ------Prepare to start Routine "test_over"-------

@@ -127,6 +127,12 @@ var test_trialClock;
 var fixation2;
 var letter2_1;
 var letter2_2;
+var check_instrClock;
+var check;
+var Learning_CheckClock;
+var quest;
+var letter_string;
+var number_string;
 var test_overClock;
 var t_outro;
 var task_overClock;
@@ -370,6 +376,54 @@ function experimentInit() {
     pos: [0.1, 0], height: 0.2,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
+  });
+  
+  // Initialize components for Routine "check_instr"
+  check_instrClock = new util.Clock();
+  check = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'check',
+    text: 'Thank you!\n\nNow think about the symbols you saw. \n\nYou will be asked to indicate which symbol you thought was the most likely to give you extra points. \n\nYou will then indicate which symbol was the least likely to give you points. \n\nYou will do this by using numbers 1-6 on top of the keyboard.\n1  2  3  4  5  or  6\nUse the numbers to identify the letter of your choice. \n\n\nPress any key to continue.',
+    font: 'Arial',
+    units : undefined, 
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  // Initialize components for Routine "Learning_Check"
+  Learning_CheckClock = new util.Clock();
+  quest = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'quest',
+    text: 'default text',
+    font: 'Arial',
+    units : undefined, 
+    pos: [0, 0.6], height: 0.15,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  letter_string = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'letter_string',
+    text: 'default text',
+    font: 'hiragana tfb',
+    units : undefined, 
+    pos: [0, 0.1], height: 0.25,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  number_string = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'number_string',
+    text: 'default text',
+    font: 'Arial',
+    units : undefined, 
+    pos: [0, (- 0.2)], height: 0.2,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
   });
   
   // Initialize components for Routine "test_over"
@@ -712,6 +766,13 @@ function letterMasterLoopBegin(thisScheduler) {
     thisScheduler.add(testLoopBegin, testLoopScheduler);
     thisScheduler.add(testLoopScheduler);
     thisScheduler.add(testLoopEnd);
+    thisScheduler.add(check_instrRoutineBegin);
+    thisScheduler.add(check_instrRoutineEachFrame);
+    thisScheduler.add(check_instrRoutineEnd);
+    const checksLoopScheduler = new Scheduler(psychoJS);
+    thisScheduler.add(checksLoopBegin, checksLoopScheduler);
+    thisScheduler.add(checksLoopScheduler);
+    thisScheduler.add(checksLoopEnd);
     thisScheduler.add(test_overRoutineBegin);
     thisScheduler.add(test_overRoutineEachFrame);
     thisScheduler.add(test_overRoutineEnd);
@@ -782,6 +843,37 @@ function testLoopBegin(thisScheduler) {
 
 function testLoopEnd() {
   psychoJS.experiment.removeLoop(test);
+
+  return Scheduler.Event.NEXT;
+}
+
+var checks;
+function checksLoopBegin(thisScheduler) {
+  // set up handler to look after randomisation of conditions etc
+  checks = new TrialHandler({
+    psychoJS: psychoJS,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    extraInfo: expInfo, originPath: undefined,
+    trialList: letterset3,
+    seed: undefined, name: 'checks'});
+  psychoJS.experiment.addLoop(checks); // add the loop to the experiment
+  currentLoop = checks;  // we're now the current loop
+
+  // Schedule all the trials in the trialList:
+  for (const thisCheck of checks) {
+    thisScheduler.add(importConditions(checks));
+    thisScheduler.add(Learning_CheckRoutineBegin);
+    thisScheduler.add(Learning_CheckRoutineEachFrame);
+    thisScheduler.add(Learning_CheckRoutineEnd);
+    thisScheduler.add(endLoopIteration(thisScheduler, thisCheck));
+  }
+
+  return Scheduler.Event.NEXT;
+}
+
+
+function checksLoopEnd() {
+  psychoJS.experiment.removeLoop(checks);
 
   return Scheduler.Event.NEXT;
 }
@@ -1355,15 +1447,15 @@ function trialRoutineBegin() {
   Corr3 = arrSum(practiceC)
   
   
-  if (myCount == 1 && Corr1 > 12 && Corr2 > 11 && Corr3 > 9 && myCount1 > 59){
+  if (myCount == 1 && Corr1 > 13 && Corr2 > 11 && Corr3 > 9 && myCount1 > 59){
       practice.finished = true;
   }
   
-  if (myCount == 2 && Corr1 > 12 && Corr2 > 11 && Corr3 > 9 && myCount2 > 59){
+  if (myCount == 2 && Corr1 > 13 && Corr2 > 11 && Corr3 > 9 && myCount2 > 59){
       practice.finished = true;
   } 
   
-  if (myCount == 3 && Corr1 > 12 && Corr2 > 11 && Corr3 > 9 && myCount3 > 59){
+  if (myCount == 3 && Corr1 > 13 && Corr2 > 11 && Corr3 > 9 && myCount3 > 59){
       practice.finished = true;
   }
   
@@ -2088,6 +2180,267 @@ function test_trialRoutineEnd() {
       }
   
   // the Routine "test_trial" was not non-slip safe, so reset the non-slip timer
+  routineTimer.reset();
+  
+  return Scheduler.Event.NEXT;
+}
+
+var check_resp;
+var check_instrComponents;
+function check_instrRoutineBegin() {
+  //------Prepare to start Routine 'check_instr'-------
+  t = 0;
+  check_instrClock.reset(); // clock
+  frameN = -1;
+  // update component parameters for each repeat
+  check_resp = new core.BuilderKeyResponse(psychoJS);
+  
+  // keep track of which components have finished
+  check_instrComponents = [];
+  check_instrComponents.push(check);
+  check_instrComponents.push(check_resp);
+  
+  for (const thisComponent of check_instrComponents)
+    if ('status' in thisComponent)
+      thisComponent.status = PsychoJS.Status.NOT_STARTED;
+  
+  return Scheduler.Event.NEXT;
+}
+
+
+function check_instrRoutineEachFrame() {
+  //------Loop for each frame of Routine 'check_instr'-------
+  let continueRoutine = true; // until we're told otherwise
+  // get current time
+  t = check_instrClock.getTime();
+  frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+  // update/draw components on each frame
+  
+  // *check* updates
+  if (t >= 0.0 && check.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    check.tStart = t;  // (not accounting for frame time here)
+    check.frameNStart = frameN;  // exact frame index
+    check.setAutoDraw(true);
+  }
+
+  
+  // *check_resp* updates
+  if (t >= 0.0 && check_resp.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    check_resp.tStart = t;  // (not accounting for frame time here)
+    check_resp.frameNStart = frameN;  // exact frame index
+    check_resp.status = PsychoJS.Status.STARTED;
+    // keyboard checking is just starting
+    psychoJS.window.callOnFlip(function() { check_resp.clock.reset(); }); // t = 0 on screen flip
+    psychoJS.eventManager.clearEvents({eventType:'keyboard'});
+  }
+
+  if (check_resp.status === PsychoJS.Status.STARTED) {
+    let theseKeys = psychoJS.eventManager.getKeys();
+    
+    // check for quit:
+    if (theseKeys.indexOf('escape') > -1) {
+      psychoJS.experiment.experimentEnded = true;
+    }
+    
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      check_resp.keys = theseKeys[theseKeys.length-1];  // just the last key pressed
+      check_resp.rt = check_resp.clock.getTime();
+      // a response ends the routine
+      continueRoutine = false;
+    }
+  }
+  
+  // check for quit (typically the Esc key)
+  if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+    return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
+  }
+  
+  // check if the Routine should terminate
+  if (!continueRoutine) {  // a component has requested a forced-end of Routine
+    return Scheduler.Event.NEXT;
+  }
+  
+  continueRoutine = false;  // reverts to True if at least one component still running
+  for (const thisComponent of check_instrComponents)
+    if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+      continueRoutine = true;
+      break;
+    }
+  
+  // refresh the screen if continuing
+  if (continueRoutine) {
+    return Scheduler.Event.FLIP_REPEAT;
+  }
+  else {
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function check_instrRoutineEnd() {
+  //------Ending Routine 'check_instr'-------
+  for (const thisComponent of check_instrComponents) {
+    if (typeof thisComponent.setAutoDraw === 'function') {
+      thisComponent.setAutoDraw(false);
+    }
+  }
+  
+  // check responses
+  if (check_resp.keys === undefined || check_resp.keys.length === 0) {    // No response was made
+      check_resp.keys = undefined;
+  }
+  
+  psychoJS.experiment.addData('check_resp.keys', check_resp.keys);
+  if (typeof check_resp.keys !== 'undefined') {  // we had a response
+      psychoJS.experiment.addData('check_resp.rt', check_resp.rt);
+      routineTimer.reset();
+      }
+  
+  // the Routine "check_instr" was not non-slip safe, so reset the non-slip timer
+  routineTimer.reset();
+  
+  return Scheduler.Event.NEXT;
+}
+
+var learnt_resp;
+var Learning_CheckComponents;
+function Learning_CheckRoutineBegin() {
+  //------Prepare to start Routine 'Learning_Check'-------
+  t = 0;
+  Learning_CheckClock.reset(); // clock
+  frameN = -1;
+  // update component parameters for each repeat
+  quest.setText(question);
+  letter_string.setText(learnt_letters);
+  number_string.setText(numbers);
+  learnt_resp = new core.BuilderKeyResponse(psychoJS);
+  
+  // keep track of which components have finished
+  Learning_CheckComponents = [];
+  Learning_CheckComponents.push(quest);
+  Learning_CheckComponents.push(letter_string);
+  Learning_CheckComponents.push(number_string);
+  Learning_CheckComponents.push(learnt_resp);
+  
+  for (const thisComponent of Learning_CheckComponents)
+    if ('status' in thisComponent)
+      thisComponent.status = PsychoJS.Status.NOT_STARTED;
+  
+  return Scheduler.Event.NEXT;
+}
+
+
+function Learning_CheckRoutineEachFrame() {
+  //------Loop for each frame of Routine 'Learning_Check'-------
+  let continueRoutine = true; // until we're told otherwise
+  // get current time
+  t = Learning_CheckClock.getTime();
+  frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+  // update/draw components on each frame
+  
+  // *quest* updates
+  if (t >= 0.0 && quest.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    quest.tStart = t;  // (not accounting for frame time here)
+    quest.frameNStart = frameN;  // exact frame index
+    quest.setAutoDraw(true);
+  }
+
+  
+  // *letter_string* updates
+  if (t >= 0.0 && letter_string.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    letter_string.tStart = t;  // (not accounting for frame time here)
+    letter_string.frameNStart = frameN;  // exact frame index
+    letter_string.setAutoDraw(true);
+  }
+
+  
+  // *number_string* updates
+  if (t >= 0.0 && number_string.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    number_string.tStart = t;  // (not accounting for frame time here)
+    number_string.frameNStart = frameN;  // exact frame index
+    number_string.setAutoDraw(true);
+  }
+
+  
+  // *learnt_resp* updates
+  if (t >= 0.0 && learnt_resp.status === PsychoJS.Status.NOT_STARTED) {
+    // keep track of start time/frame for later
+    learnt_resp.tStart = t;  // (not accounting for frame time here)
+    learnt_resp.frameNStart = frameN;  // exact frame index
+    learnt_resp.status = PsychoJS.Status.STARTED;
+    // keyboard checking is just starting
+    psychoJS.window.callOnFlip(function() { learnt_resp.clock.reset(); }); // t = 0 on screen flip
+    psychoJS.eventManager.clearEvents({eventType:'keyboard'});
+  }
+
+  if (learnt_resp.status === PsychoJS.Status.STARTED) {
+    let theseKeys = psychoJS.eventManager.getKeys({keyList:['1', '2', '3', '4', '5', '6']});
+    
+    // check for quit:
+    if (theseKeys.indexOf('escape') > -1) {
+      psychoJS.experiment.experimentEnded = true;
+    }
+    
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      learnt_resp.keys = theseKeys[theseKeys.length-1];  // just the last key pressed
+      learnt_resp.rt = learnt_resp.clock.getTime();
+      // a response ends the routine
+      continueRoutine = false;
+    }
+  }
+  
+  // check for quit (typically the Esc key)
+  if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+    return psychoJS.quit('The [Escape] key was pressed. Goodbye!', false);
+  }
+  
+  // check if the Routine should terminate
+  if (!continueRoutine) {  // a component has requested a forced-end of Routine
+    return Scheduler.Event.NEXT;
+  }
+  
+  continueRoutine = false;  // reverts to True if at least one component still running
+  for (const thisComponent of Learning_CheckComponents)
+    if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+      continueRoutine = true;
+      break;
+    }
+  
+  // refresh the screen if continuing
+  if (continueRoutine) {
+    return Scheduler.Event.FLIP_REPEAT;
+  }
+  else {
+    return Scheduler.Event.NEXT;
+  }
+}
+
+
+function Learning_CheckRoutineEnd() {
+  //------Ending Routine 'Learning_Check'-------
+  for (const thisComponent of Learning_CheckComponents) {
+    if (typeof thisComponent.setAutoDraw === 'function') {
+      thisComponent.setAutoDraw(false);
+    }
+  }
+  
+  // check responses
+  if (learnt_resp.keys === undefined || learnt_resp.keys.length === 0) {    // No response was made
+      learnt_resp.keys = undefined;
+  }
+  
+  psychoJS.experiment.addData('learnt_resp.keys', learnt_resp.keys);
+  if (typeof learnt_resp.keys !== 'undefined') {  // we had a response
+      psychoJS.experiment.addData('learnt_resp.rt', learnt_resp.rt);
+      routineTimer.reset();
+      }
+  
+  // the Routine "Learning_Check" was not non-slip safe, so reset the non-slip timer
   routineTimer.reset();
   
   return Scheduler.Event.NEXT;

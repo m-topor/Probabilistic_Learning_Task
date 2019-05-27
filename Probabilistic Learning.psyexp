@@ -34,8 +34,8 @@
       <CodeComponent name="code">
         <Param name="Begin Experiment" updates="constant" val="from numpy.random import random&amp;#10;&amp;#10;#create empty variables&amp;#10;&amp;#10;myCount1 = 0&amp;#10;myCount2 = 0&amp;#10;myCount3 = 0&amp;#10;&amp;#10;#create emoty lists&amp;#10;&amp;#10;resp1 = []&amp;#10;resp2 = []&amp;#10;resp3 = []&amp;#10;&amp;#10;resplist1 = []&amp;#10;resplist2 = []&amp;#10;resplist3 = []&amp;#10;&amp;#10;Corr1 = []&amp;#10;Corr2 = []&amp;#10;Corr3 = []&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="myCount1 = 0&amp;#10;myCount2 = 0&amp;#10;myCount3 = 0&amp;#10;&amp;#10;resp1 = []&amp;#10;resp2 = []&amp;#10;resp3 = []&amp;#10;&amp;#10;resplist1 = []&amp;#10;resplist2 = []&amp;#10;resplist3 = []&amp;#10;&amp;#10;Corr1 = 0&amp;#10;Corr2 = 0&amp;#10;Corr3 = 0" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if(myCount == 1) {&amp;#10;  myCount1 = myCount1 + 1;&amp;#10;} else {&amp;#10;  myCount1 = myCount1 + 0;&amp;#10;}&amp;#10;&amp;#10;if(myCount == 2) {&amp;#10;  myCount2 = myCount2 + 1;&amp;#10;} else {&amp;#10;  myCount2 = myCount2 + 0;&amp;#10;}&amp;#10;&amp;#10;if(myCount == 3) {&amp;#10;  myCount3 = myCount3 + 1;&amp;#10;} else {&amp;#10;  myCount3 = myCount3 + 0;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;practiceA = resplist1.slice(-60)&amp;#10;practiceB = resplist2.slice(-60)&amp;#10;practiceC = resplist3.slice(-60)&amp;#10;&amp;#10;&amp;#10;arrSum = function(arr){&amp;#10;  return arr.reduce(function(a,b){&amp;#10;    return a + b&amp;#10;  }, 0);&amp;#10;}&amp;#10;&amp;#10;&amp;#10;Corr1 = arrSum(practiceA)&amp;#10;Corr2 = arrSum(practiceB)&amp;#10;Corr3 = arrSum(practiceC)&amp;#10;&amp;#10;&amp;#10;if (myCount == 1 &amp;&amp; Corr1 &gt; 12 &amp;&amp; Corr2 &gt; 11 &amp;&amp; Corr3 &gt; 9 &amp;&amp; myCount1 &gt; 59){&amp;#10;    practice.finished = true;&amp;#10;}&amp;#10;&amp;#10;if (myCount == 2 &amp;&amp; Corr1 &gt; 12 &amp;&amp; Corr2 &gt; 11 &amp;&amp; Corr3 &gt; 9 &amp;&amp; myCount2 &gt; 59){&amp;#10;    practice.finished = true;&amp;#10;} &amp;#10;&amp;#10;if (myCount == 3 &amp;&amp; Corr1 &gt; 12 &amp;&amp; Corr2 &gt; 11 &amp;&amp; Corr3 &gt; 9 &amp;&amp; myCount3 &gt; 59){&amp;#10;    practice.finished = true;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;jitter = Math.random() * (0.8 - 0.3) + 0.3;&amp;#10; &amp;#10;jitter = round(jitter, 1);&amp;#10;&amp;#10;&amp;#10;jitter2 = Math.random() * (1.0 - 0.5) + 0.5;&amp;#10; &amp;#10;jitter2 = round(jitter2, 1);&amp;#10;&amp;#10;function round(value, precision) {&amp;#10;    var x = Math.pow(10, precision);&amp;#10;    return Math.round(value * x) / x;&amp;#10;}&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# make a count of trials for each pair of letters (A&amp;B, C&amp;D, E&amp;F)&amp;#10;if (myCount == 1):&amp;#10;    myCount1 = myCount1 + 1&amp;#10;else:&amp;#10;    myCount1 = myCount1 + 0&amp;#10;&amp;#10;if (myCount == 2):&amp;#10;    myCount2 = myCount2 + 1&amp;#10;else:&amp;#10;    myCount2 = myCount2 + 0&amp;#10;&amp;#10;if (myCount == 3):&amp;#10;    myCount3 = myCount3 + 1&amp;#10;else:&amp;#10;    myCount3 = myCount3 + 0&amp;#10;&amp;#10;#Monitor the number of A, C and E responses in the last 60 trials&amp;#10;#Separate for all three runs of the procedure&amp;#10;&amp;#10;if myCount == 1 and (sum(resplist1[-60:]) &gt; 12 and sum(resplist2[-60:]) &gt; 11 and sum(resplist3[-60:]) &gt; 9 and myCount1 &gt; 59):&amp;#10;    practice.finished = True&amp;#10;&amp;#10;if myCount == 2 and (sum(resplist1[-60:]) &gt; 12 and sum(resplist2[-60:]) &gt; 11 and sum(resplist3[-60:]) &gt; 9 and myCount2 &gt; 59):&amp;#10;    practice.finished = True&amp;#10;&amp;#10;if myCount == 3 and (sum(resplist1[-60:]) &gt; 12 and sum(resplist2[-60:]) &gt; 11 and sum(resplist3[-60:]) &gt; 9 and myCount3 &gt; 59):&amp;#10;    practice.finished = True&amp;#10;&amp;#10;&amp;#10;jitter = random() * (0.8 - 0.3) + 0.3&amp;#10;jitter = round(jitter, 1) # round to 1 decimal place&amp;#10;jitter2 = random() * (1.0-0.5) + 0.5" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if(myCount == 1) {&amp;#10;  myCount1 = myCount1 + 1;&amp;#10;} else {&amp;#10;  myCount1 = myCount1 + 0;&amp;#10;}&amp;#10;&amp;#10;if(myCount == 2) {&amp;#10;  myCount2 = myCount2 + 1;&amp;#10;} else {&amp;#10;  myCount2 = myCount2 + 0;&amp;#10;}&amp;#10;&amp;#10;if(myCount == 3) {&amp;#10;  myCount3 = myCount3 + 1;&amp;#10;} else {&amp;#10;  myCount3 = myCount3 + 0;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;practiceA = resplist1.slice(-60)&amp;#10;practiceB = resplist2.slice(-60)&amp;#10;practiceC = resplist3.slice(-60)&amp;#10;&amp;#10;&amp;#10;arrSum = function(arr){&amp;#10;  return arr.reduce(function(a,b){&amp;#10;    return a + b&amp;#10;  }, 0);&amp;#10;}&amp;#10;&amp;#10;&amp;#10;Corr1 = arrSum(practiceA)&amp;#10;Corr2 = arrSum(practiceB)&amp;#10;Corr3 = arrSum(practiceC)&amp;#10;&amp;#10;&amp;#10;if (myCount == 1 &amp;&amp; Corr1 &gt; 13 &amp;&amp; Corr2 &gt; 11 &amp;&amp; Corr3 &gt; 9 &amp;&amp; myCount1 &gt; 59){&amp;#10;    practice.finished = true;&amp;#10;}&amp;#10;&amp;#10;if (myCount == 2 &amp;&amp; Corr1 &gt; 13 &amp;&amp; Corr2 &gt; 11 &amp;&amp; Corr3 &gt; 9 &amp;&amp; myCount2 &gt; 59){&amp;#10;    practice.finished = true;&amp;#10;} &amp;#10;&amp;#10;if (myCount == 3 &amp;&amp; Corr1 &gt; 13 &amp;&amp; Corr2 &gt; 11 &amp;&amp; Corr3 &gt; 9 &amp;&amp; myCount3 &gt; 59){&amp;#10;    practice.finished = true;&amp;#10;}&amp;#10;&amp;#10;&amp;#10;jitter = Math.random() * (0.8 - 0.3) + 0.3;&amp;#10; &amp;#10;jitter = round(jitter, 1);&amp;#10;&amp;#10;&amp;#10;jitter2 = Math.random() * (1.0 - 0.5) + 0.5;&amp;#10; &amp;#10;jitter2 = round(jitter2, 1);&amp;#10;&amp;#10;function round(value, precision) {&amp;#10;    var x = Math.pow(10, precision);&amp;#10;    return Math.round(value * x) / x;&amp;#10;}&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# make a count of trials for each pair of letters (A&amp;B, C&amp;D, E&amp;F)&amp;#10;if (myCount == 1):&amp;#10;    myCount1 = myCount1 + 1&amp;#10;else:&amp;#10;    myCount1 = myCount1 + 0&amp;#10;&amp;#10;if (myCount == 2):&amp;#10;    myCount2 = myCount2 + 1&amp;#10;else:&amp;#10;    myCount2 = myCount2 + 0&amp;#10;&amp;#10;if (myCount == 3):&amp;#10;    myCount3 = myCount3 + 1&amp;#10;else:&amp;#10;    myCount3 = myCount3 + 0&amp;#10;&amp;#10;#Monitor the number of A, C and E responses in the last 60 trials&amp;#10;#Separate for all three runs of the procedure&amp;#10;&amp;#10;if myCount == 1 and (sum(resplist1[-60:]) &gt; 13 and sum(resplist2[-60:]) &gt; 11 and sum(resplist3[-60:]) &gt; 9 and myCount1 &gt; 59):&amp;#10;    practice.finished = True&amp;#10;&amp;#10;if myCount == 2 and (sum(resplist1[-60:]) &gt; 13 and sum(resplist2[-60:]) &gt; 11 and sum(resplist3[-60:]) &gt; 9 and myCount2 &gt; 59):&amp;#10;    practice.finished = True&amp;#10;&amp;#10;if myCount == 3 and (sum(resplist1[-60:]) &gt; 13 and sum(resplist2[-60:]) &gt; 11 and sum(resplist3[-60:]) &gt; 9 and myCount3 &gt; 59):&amp;#10;    practice.finished = True&amp;#10;&amp;#10;&amp;#10;jitter = random() * (0.8 - 0.3) + 0.3&amp;#10;jitter = round(jitter, 1) # round to 1 decimal place&amp;#10;jitter2 = random() * (1.0-0.5) + 0.5" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -809,6 +809,142 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="Learning_Check">
+      <TextComponent name="quest">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="quest" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.6)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$question" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="letter_string">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="hiragana tfb" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.25" valType="code"/>
+        <Param name="name" updates="None" val="letter_string" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$learnt_letters" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="number_string">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.2" valType="code"/>
+        <Param name="name" updates="None" val="number_string" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$numbers" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="learnt_resp">
+        <Param name="allowedKeys" updates="constant" val="'1','2','3','4','5','6'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="learnt_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="check_instr">
+      <TextComponent name="check">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="check" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Thank you!&amp;#10;&amp;#10;Now think about the symbols you saw. &amp;#10;&amp;#10;You will be asked to indicate which symbol you thought was the most likely to give you extra points. &amp;#10;&amp;#10;You will then indicate which symbol was the least likely to give you points. &amp;#10;&amp;#10;You will do this by using numbers 1-6 on top of the keyboard.&amp;#10;1  2  3  4  5  or  6&amp;#10;Use the numbers to identify the letter of your choice. &amp;#10;&amp;#10;&amp;#10;Press any key to continue." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="check_resp">
+        <Param name="allowedKeys" updates="constant" val="" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="check_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="Welcome"/>
@@ -869,6 +1005,20 @@
     </LoopInitiator>
     <Routine name="test_trial"/>
     <LoopTerminator name="test"/>
+    <Routine name="check_instr"/>
+    <LoopInitiator loopType="TrialHandler" name="checks">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$letterset3" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="checks" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="Learning_Check"/>
+    <LoopTerminator name="checks"/>
     <Routine name="test_over"/>
     <LoopTerminator name="letterMaster"/>
     <Routine name="task_over"/>
