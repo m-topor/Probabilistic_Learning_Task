@@ -227,7 +227,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, 0.015], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.06], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -238,7 +238,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -249,7 +249,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, (- 0.015)], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.06)], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -426,7 +426,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, 0.015], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.06], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -437,7 +437,7 @@ function experimentInit() {
     text: 'default text',
     font: 'hiragana tfb',
     units : undefined, 
-    pos: [0, 0.0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -448,7 +448,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, (- 0.015)], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.06)], height: 0.08,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
