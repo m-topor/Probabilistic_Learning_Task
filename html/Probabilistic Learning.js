@@ -24,7 +24,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'Probabilistic Learning';  // from the Builder filename that created this script
-let expInfo = {'participant': '', '': ''};
+let expInfo = {'Participant ID*': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
