@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on May 27, 2019, at 18:59
+    on May 27, 2019, at 19:22
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -100,14 +100,14 @@ fixation0 = visual.TextStim(win=win, name='fixation0',
 letter0_1 = visual.TextStim(win=win, name='letter0_1',
     text='default text',
     font='hiragana tfb',
-    pos=(-0.1, 0), height=0.2, wrapWidth=None, ori=0, 
+    pos=(-0.1, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 letter0_2 = visual.TextStim(win=win, name='letter0_2',
     text='default text',
     font='hiragana tfb',
-    pos=(0.1, 0), height=0.2, wrapWidth=None, ori=0, 
+    pos=(0.1, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -117,7 +117,7 @@ prep_feedbackClock = core.Clock()
 prep_feedb = visual.TextStim(win=win, name='prep_feedb',
     text='default text',
     font='Calibri',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.08, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -131,30 +131,6 @@ prep_outro = visual.TextStim(win=win, name='prep_outro',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-
-# Initialize components for Routine "Learning_Check"
-Learning_CheckClock = core.Clock()
-quest = visual.TextStim(win=win, name='quest',
-    text='default text',
-    font='Arial',
-    pos=(0, 0.6), height=0.15, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-letter_string = visual.TextStim(win=win, name='letter_string',
-    text='default text',
-    font='hiragana tfb',
-    pos=(0, 0.1), height=0.25, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-number_string = visual.TextStim(win=win, name='number_string',
-    text='default text',
-    font='Arial',
-    pos=(0, -0.2), height=0.2, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
 
 # Initialize components for Routine "Practice_Instruction"
 Practice_InstructionClock = core.Clock()
@@ -205,14 +181,14 @@ fixation1 = visual.TextStim(win=win, name='fixation1',
 letter1_1 = visual.TextStim(win=win, name='letter1_1',
     text='default text',
     font='hiragana tfb',
-    pos=[-0.1,0], height=0.2, wrapWidth=None, ori=0, 
+    pos=[-0.1,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 letter1_2 = visual.TextStim(win=win, name='letter1_2',
     text='default text',
     font='hiragana tfb',
-    pos=[0.1,0], height=0.2, wrapWidth=None, ori=0, 
+    pos=[0.1,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -229,7 +205,7 @@ blank_feed = visual.TextStim(win=win, name='blank_feed',
 feedb = visual.TextStim(win=win, name='feedb',
     text='default text',
     font='Calibri',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.08, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -268,14 +244,14 @@ fixation2 = visual.TextStim(win=win, name='fixation2',
 letter2_1 = visual.TextStim(win=win, name='letter2_1',
     text='default text',
     font='hiragana tfb',
-    pos=(-0.1, 0), height=0.2, wrapWidth=None, ori=0, 
+    pos=(-0.1, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 letter2_2 = visual.TextStim(win=win, name='letter2_2',
     text='default text',
     font='hiragana tfb',
-    pos=(0.1, 0), height=0.2, wrapWidth=None, ori=0, 
+    pos=(0.1, 0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -295,21 +271,21 @@ Learning_CheckClock = core.Clock()
 quest = visual.TextStim(win=win, name='quest',
     text='default text',
     font='Arial',
-    pos=(0, 0.6), height=0.15, wrapWidth=None, ori=0, 
+    pos=(0, 0.15), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 letter_string = visual.TextStim(win=win, name='letter_string',
     text='default text',
     font='hiragana tfb',
-    pos=(0, 0.1), height=0.25, wrapWidth=None, ori=0, 
+    pos=(0, 0.0), height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 number_string = visual.TextStim(win=win, name='number_string',
     text='default text',
     font='Arial',
-    pos=(0, -0.2), height=0.2, wrapWidth=None, ori=0, 
+    pos=(0, -0.1), height=0.08, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -875,141 +851,6 @@ for thisLetterMaster in letterMaster:
     if thisLetterMaster != None:
         for paramName in thisLetterMaster:
             exec('{} = thisLetterMaster[paramName]'.format(paramName))
-    
-    # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=1, method='sequential', 
-        extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions(letterset3),
-        seed=None, name='trials')
-    thisExp.addLoop(trials)  # add the loop to the experiment
-    thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-    if thisTrial != None:
-        for paramName in thisTrial:
-            exec('{} = thisTrial[paramName]'.format(paramName))
-    
-    for thisTrial in trials:
-        currentLoop = trials
-        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-        if thisTrial != None:
-            for paramName in thisTrial:
-                exec('{} = thisTrial[paramName]'.format(paramName))
-        
-        # ------Prepare to start Routine "Learning_Check"-------
-        t = 0
-        Learning_CheckClock.reset()  # clock
-        frameN = -1
-        continueRoutine = True
-        # update component parameters for each repeat
-        quest.setText(question)
-        letter_string.setText(learnt_letters)
-        number_string.setText(numbers)
-        learnt_resp = keyboard.Keyboard()
-        # keep track of which components have finished
-        Learning_CheckComponents = [quest, letter_string, number_string, learnt_resp]
-        for thisComponent in Learning_CheckComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        
-        # -------Start Routine "Learning_Check"-------
-        while continueRoutine:
-            # get current time
-            t = Learning_CheckClock.getTime()
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *quest* updates
-            if t >= 0.0 and quest.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                quest.tStart = t  # not accounting for scr refresh
-                quest.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(quest, 'tStartRefresh')  # time at next scr refresh
-                quest.setAutoDraw(True)
-            
-            # *letter_string* updates
-            if t >= 0.0 and letter_string.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                letter_string.tStart = t  # not accounting for scr refresh
-                letter_string.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(letter_string, 'tStartRefresh')  # time at next scr refresh
-                letter_string.setAutoDraw(True)
-            
-            # *number_string* updates
-            if t >= 0.0 and number_string.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                number_string.tStart = t  # not accounting for scr refresh
-                number_string.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(number_string, 'tStartRefresh')  # time at next scr refresh
-                number_string.setAutoDraw(True)
-            
-            # *learnt_resp* updates
-            if t >= 0.0 and learnt_resp.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                learnt_resp.tStart = t  # not accounting for scr refresh
-                learnt_resp.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(learnt_resp, 'tStartRefresh')  # time at next scr refresh
-                learnt_resp.status = STARTED
-                # keyboard checking is just starting
-                win.callOnFlip(learnt_resp.clock.reset)  # t=0 on next screen flip
-                learnt_resp.clearEvents(eventType='keyboard')
-            if learnt_resp.status == STARTED:
-                theseKeys = learnt_resp.getKeys(keyList=['1', '2', '3', '4', '5', '6'], waitRelease=False)
-                if len(theseKeys):
-                    theseKeys = theseKeys[0]  # at least one key was pressed
-                    
-                    # check for quit:
-                    if "escape" == theseKeys:
-                        endExpNow = True
-                    learnt_resp.keys = theseKeys.name  # just the last key pressed
-                    learnt_resp.rt = theseKeys.rt
-                    # a response ends the routine
-                    continueRoutine = False
-            
-            # check for quit (typically the Esc key)
-            if endExpNow or keyboard.Keyboard().getKeys(keyList=["escape"]):
-                core.quit()
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in Learning_CheckComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # -------Ending Routine "Learning_Check"-------
-        for thisComponent in Learning_CheckComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        trials.addData('quest.started', quest.tStartRefresh)
-        trials.addData('quest.stopped', quest.tStopRefresh)
-        trials.addData('letter_string.started', letter_string.tStartRefresh)
-        trials.addData('letter_string.stopped', letter_string.tStopRefresh)
-        trials.addData('number_string.started', number_string.tStartRefresh)
-        trials.addData('number_string.stopped', number_string.tStopRefresh)
-        # check responses
-        if learnt_resp.keys in ['', [], None]:  # No response was made
-            learnt_resp.keys = None
-        trials.addData('learnt_resp.keys',learnt_resp.keys)
-        if learnt_resp.keys != None:  # we had a response
-            trials.addData('learnt_resp.rt', learnt_resp.rt)
-        trials.addData('learnt_resp.started', learnt_resp.tStartRefresh)
-        trials.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
-        # the Routine "Learning_Check" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
-        thisExp.nextEntry()
-        
-    # completed 1 repeats of 'trials'
-    
     
     # ------Prepare to start Routine "Practice_Instruction"-------
     t = 0
@@ -1939,7 +1780,7 @@ for thisLetterMaster in letterMaster:
         # update component parameters for each repeat
         quest.setText(question)
         letter_string.setText(learnt_letters)
-        number_string.setText(numbers)
+        number_string.setText('1    2    3    4    5    6')
         learnt_resp = keyboard.Keyboard()
         # keep track of which components have finished
         Learning_CheckComponents = [quest, letter_string, number_string, learnt_resp]
