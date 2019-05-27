@@ -1,0 +1,11 @@
+welc_resp.keys,welc_resp.rt,intr0_resp.keys,intr0_resp.rt,prep_resp.keys,prep_resp.corr,prep_resp.rt,preparation.thisRepN,preparation.thisTrialN,preparation.thisN,preparation.thisIndex,preparation.ran,preparation.order,letter10,letter20,corrAns0,participant,,date,expName,psychopyVersion,frameRate
+space,0.646,space,0.648,m,1,0.842,1,0,10,7,1,9,L,U,m,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,0,0.164,1,0,10,1,1,9,U,L,c,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,0,0.145,1,0,10,4,1,9,U,L,c,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,1,0.146,1,0,10,9,1,9,U,L,m,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,0,0.114,1,0,10,0,1,9,U,L,c,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,0,0.113,1,0,10,6,1,9,U,L,c,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,1,0.162,1,0,10,2,1,9,L,U,m,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,0,0.064,1,0,10,8,1,9,L,U,c,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,1,0.18,1,0,10,3,1,9,L,U,m,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
+,,,,m,0,0.348,1,0,10,5,1,9,U,L,c,,,2019-05-27_19h17.18.687,Probabilistic Learning,3.1.0,60
