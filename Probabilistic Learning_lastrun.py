@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on May 27, 2019, at 18:18
+    on May 27, 2019, at 18:59
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -283,9 +283,9 @@ letter2_2 = visual.TextStim(win=win, name='letter2_2',
 # Initialize components for Routine "check_instr"
 check_instrClock = core.Clock()
 check = visual.TextStim(win=win, name='check',
-    text='Thank you!\nNow think about the symbols you saw. \n\nYou will be asked to indicate which symbol you thought was the most likely to give you extra points. \nYou will then indicate which symbol was the least likely to give you points. \n\nYou will do this by using numbers 1-6 on the keyboard.\nUse the numbers to identify the letter of your choice. \n\n\nPress any key to continue.',
+    text='Thank you!\n\nNow think about the symbols you saw. \n\nYou will be asked to indicate which symbol you thought was the most likely to give you extra points. \n\nYou will then indicate which symbol was the least likely to give you points. \n\nYou will do this by using numbers 1-6 on top of the keyboard.\n1  2  3  4  5  or  6\nUse the numbers to identify the letter of your choice. \n\n\nPress any key to continue.',
     font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -877,23 +877,23 @@ for thisLetterMaster in letterMaster:
             exec('{} = thisLetterMaster[paramName]'.format(paramName))
     
     # set up handler to look after randomisation of conditions etc
-    trials_2 = data.TrialHandler(nReps=1, method='sequential', 
+    trials = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions(letterset3),
-        seed=None, name='trials_2')
-    thisExp.addLoop(trials_2)  # add the loop to the experiment
-    thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
-    if thisTrial_2 != None:
-        for paramName in thisTrial_2:
-            exec('{} = thisTrial_2[paramName]'.format(paramName))
+        seed=None, name='trials')
+    thisExp.addLoop(trials)  # add the loop to the experiment
+    thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+    if thisTrial != None:
+        for paramName in thisTrial:
+            exec('{} = thisTrial[paramName]'.format(paramName))
     
-    for thisTrial_2 in trials_2:
-        currentLoop = trials_2
-        # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
-        if thisTrial_2 != None:
-            for paramName in thisTrial_2:
-                exec('{} = thisTrial_2[paramName]'.format(paramName))
+    for thisTrial in trials:
+        currentLoop = trials
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+        if thisTrial != None:
+            for paramName in thisTrial:
+                exec('{} = thisTrial[paramName]'.format(paramName))
         
         # ------Prepare to start Routine "Learning_Check"-------
         t = 0
@@ -990,25 +990,25 @@ for thisLetterMaster in letterMaster:
         for thisComponent in Learning_CheckComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        trials_2.addData('quest.started', quest.tStartRefresh)
-        trials_2.addData('quest.stopped', quest.tStopRefresh)
-        trials_2.addData('letter_string.started', letter_string.tStartRefresh)
-        trials_2.addData('letter_string.stopped', letter_string.tStopRefresh)
-        trials_2.addData('number_string.started', number_string.tStartRefresh)
-        trials_2.addData('number_string.stopped', number_string.tStopRefresh)
+        trials.addData('quest.started', quest.tStartRefresh)
+        trials.addData('quest.stopped', quest.tStopRefresh)
+        trials.addData('letter_string.started', letter_string.tStartRefresh)
+        trials.addData('letter_string.stopped', letter_string.tStopRefresh)
+        trials.addData('number_string.started', number_string.tStartRefresh)
+        trials.addData('number_string.stopped', number_string.tStopRefresh)
         # check responses
         if learnt_resp.keys in ['', [], None]:  # No response was made
             learnt_resp.keys = None
-        trials_2.addData('learnt_resp.keys',learnt_resp.keys)
+        trials.addData('learnt_resp.keys',learnt_resp.keys)
         if learnt_resp.keys != None:  # we had a response
-            trials_2.addData('learnt_resp.rt', learnt_resp.rt)
-        trials_2.addData('learnt_resp.started', learnt_resp.tStartRefresh)
-        trials_2.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
+            trials.addData('learnt_resp.rt', learnt_resp.rt)
+        trials.addData('learnt_resp.started', learnt_resp.tStartRefresh)
+        trials.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
         # the Routine "Learning_Check" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 1 repeats of 'trials_2'
+    # completed 1 repeats of 'trials'
     
     
     # ------Prepare to start Routine "Practice_Instruction"-------
@@ -1152,13 +1152,13 @@ for thisLetterMaster in letterMaster:
         #Monitor the number of A, C and E responses in the last 60 trials
         #Separate for all three runs of the procedure
         
-        if myCount == 1 and (sum(resplist1[-60:]) > 12 and sum(resplist2[-60:]) > 11 and sum(resplist3[-60:]) > 9 and myCount1 > 59):
+        if myCount == 1 and (sum(resplist1[-60:]) > 13 and sum(resplist2[-60:]) > 11 and sum(resplist3[-60:]) > 9 and myCount1 > 59):
             practice.finished = True
         
-        if myCount == 2 and (sum(resplist1[-60:]) > 12 and sum(resplist2[-60:]) > 11 and sum(resplist3[-60:]) > 9 and myCount2 > 59):
+        if myCount == 2 and (sum(resplist1[-60:]) > 13 and sum(resplist2[-60:]) > 11 and sum(resplist3[-60:]) > 9 and myCount2 > 59):
             practice.finished = True
         
-        if myCount == 3 and (sum(resplist1[-60:]) > 12 and sum(resplist2[-60:]) > 11 and sum(resplist3[-60:]) > 9 and myCount3 > 59):
+        if myCount == 3 and (sum(resplist1[-60:]) > 13 and sum(resplist2[-60:]) > 11 and sum(resplist3[-60:]) > 9 and myCount3 > 59):
             practice.finished = True
         
         
@@ -1913,23 +1913,23 @@ for thisLetterMaster in letterMaster:
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=1, method='sequential', 
+    checks = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions(letterset3),
-        seed=None, name='trials')
-    thisExp.addLoop(trials)  # add the loop to the experiment
-    thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-    if thisTrial != None:
-        for paramName in thisTrial:
-            exec('{} = thisTrial[paramName]'.format(paramName))
+        seed=None, name='checks')
+    thisExp.addLoop(checks)  # add the loop to the experiment
+    thisCheck = checks.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisCheck.rgb)
+    if thisCheck != None:
+        for paramName in thisCheck:
+            exec('{} = thisCheck[paramName]'.format(paramName))
     
-    for thisTrial in trials:
-        currentLoop = trials
-        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-        if thisTrial != None:
-            for paramName in thisTrial:
-                exec('{} = thisTrial[paramName]'.format(paramName))
+    for thisCheck in checks:
+        currentLoop = checks
+        # abbreviate parameter names if possible (e.g. rgb = thisCheck.rgb)
+        if thisCheck != None:
+            for paramName in thisCheck:
+                exec('{} = thisCheck[paramName]'.format(paramName))
         
         # ------Prepare to start Routine "Learning_Check"-------
         t = 0
@@ -2026,25 +2026,25 @@ for thisLetterMaster in letterMaster:
         for thisComponent in Learning_CheckComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        trials.addData('quest.started', quest.tStartRefresh)
-        trials.addData('quest.stopped', quest.tStopRefresh)
-        trials.addData('letter_string.started', letter_string.tStartRefresh)
-        trials.addData('letter_string.stopped', letter_string.tStopRefresh)
-        trials.addData('number_string.started', number_string.tStartRefresh)
-        trials.addData('number_string.stopped', number_string.tStopRefresh)
+        checks.addData('quest.started', quest.tStartRefresh)
+        checks.addData('quest.stopped', quest.tStopRefresh)
+        checks.addData('letter_string.started', letter_string.tStartRefresh)
+        checks.addData('letter_string.stopped', letter_string.tStopRefresh)
+        checks.addData('number_string.started', number_string.tStartRefresh)
+        checks.addData('number_string.stopped', number_string.tStopRefresh)
         # check responses
         if learnt_resp.keys in ['', [], None]:  # No response was made
             learnt_resp.keys = None
-        trials.addData('learnt_resp.keys',learnt_resp.keys)
+        checks.addData('learnt_resp.keys',learnt_resp.keys)
         if learnt_resp.keys != None:  # we had a response
-            trials.addData('learnt_resp.rt', learnt_resp.rt)
-        trials.addData('learnt_resp.started', learnt_resp.tStartRefresh)
-        trials.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
+            checks.addData('learnt_resp.rt', learnt_resp.rt)
+        checks.addData('learnt_resp.started', learnt_resp.tStartRefresh)
+        checks.addData('learnt_resp.stopped', learnt_resp.tStopRefresh)
         # the Routine "Learning_Check" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 1 repeats of 'trials'
+    # completed 1 repeats of 'checks'
     
     
     # ------Prepare to start Routine "test_over"-------
