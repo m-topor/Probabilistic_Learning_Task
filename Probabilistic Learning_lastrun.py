@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on June 04, 2019, at 21:45
+    on June 04, 2019, at 23:23
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\uni\\PhD\\Tasks\\Probabilistic Learning Pavlovia\\Probabilistic Learning_lastrun.py',
+    originPath='G:\\uni\\PhD\\Tasks\\Probabilistic Learning Pavlovia\\Probabilistic Learning_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -101,7 +101,7 @@ letterpic0_1 = visual.ImageStim(
     win=win,
     name='letterpic0_1', 
     image='sin', mask=None,
-    ori=0, pos=(-0.1, 0), size=(0.5, 0.5),
+    ori=0, pos=(-0.1, 0), size=(0.2, 0.2),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -109,7 +109,7 @@ letterpic0_2 = visual.ImageStim(
     win=win,
     name='letterpic0_2', 
     image='sin', mask=None,
-    ori=0, pos=(0.1, 0), size=(0.5, 0.5),
+    ori=0, pos=(0.1, 0), size=(0.2, 0.2),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -180,20 +180,22 @@ fixation1 = visual.TextStim(win=win, name='fixation1',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
-letter1_1 = visual.TextStim(win=win, name='letter1_1',
-    text='default text',
-    font='hiragana tfb',
-    pos=[-0.1,0], height=0.15, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-letter1_2 = visual.TextStim(win=win, name='letter1_2',
-    text='default text',
-    font='hiragana tfb',
-    pos=[0.1,0], height=0.15, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
+letterpic1_1 = visual.ImageStim(
+    win=win,
+    name='letterpic1_1', 
+    image='sin', mask=None,
+    ori=0, pos=[-0.1,0], size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+letterpic1_2 = visual.ImageStim(
+    win=win,
+    name='letterpic1_2', 
+    image='sin', mask=None,
+    ori=0, pos=[0.1,0], size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
 
 # Initialize components for Routine "feedback"
 feedbackClock = core.Clock()
@@ -243,20 +245,22 @@ fixation2 = visual.TextStim(win=win, name='fixation2',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
-letter2_1 = visual.TextStim(win=win, name='letter2_1',
-    text='default text',
-    font='hiragana tfb',
-    pos=(-0.1, 0), height=0.15, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
-letter2_2 = visual.TextStim(win=win, name='letter2_2',
-    text='default text',
-    font='hiragana tfb',
-    pos=(0.1, 0), height=0.15, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-3.0);
+letterpic2_1 = visual.ImageStim(
+    win=win,
+    name='letterpic2_1', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.1, 0), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
+letterpic2_2 = visual.ImageStim(
+    win=win,
+    name='letterpic2_2', 
+    image='sin', mask=None,
+    ori=0, pos=(0.1, 0), size=(0.2, 0.2),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
 
 # Initialize components for Routine "check_instr"
 check_instrClock = core.Clock()
@@ -273,24 +277,26 @@ Learning_CheckClock = core.Clock()
 quest = visual.TextStim(win=win, name='quest',
     text='default text',
     font='Arial',
-    pos=(0, 0.15), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, 0.2), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-letter_string = visual.TextStim(win=win, name='letter_string',
-    text='default text',
-    font='hiragana tfb',
-    pos=(0, 0.0), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-number_string = visual.TextStim(win=win, name='number_string',
-    text='default text',
-    font='Arial',
-    pos=(0, -0.1), height=0.08, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
+letter_string_pic = visual.ImageStim(
+    win=win,
+    name='letter_string_pic', 
+    image='sin', mask=None,
+    ori=0, pos=(0, 0), size=(0.4, 0.4),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+number_string_pic = visual.ImageStim(
+    win=win,
+    name='number_string_pic', 
+    image='sin', mask=None,
+    ori=0, pos=(0, -0.15), size=(0.4, 0.4),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "test_over"
 test_overClock = core.Clock()
@@ -1008,11 +1014,11 @@ for thisLetterMaster in letterMaster:
         jitter = random() * (0.8 - 0.3) + 0.3
         jitter = round(jitter, 1) # round to 1 decimal place
         jitter2 = random() * (1.0-0.5) + 0.5
-        letter1_1.setText(letter1)
-        letter1_2.setText(letter2)
+        letterpic1_1.setImage(letter1)
+        letterpic1_2.setImage(letter2)
         resp = keyboard.Keyboard()
         # keep track of which components have finished
-        trialComponents = [fixation1, letter1_1, letter1_2, resp]
+        trialComponents = [fixation1, letterpic1_1, letterpic1_2, resp]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1046,35 +1052,35 @@ for thisLetterMaster in letterMaster:
                 win.timeOnFlip(fixation1, 'tStopRefresh')  # time at next scr refresh
                 fixation1.setAutoDraw(False)
             
-            # *letter1_1* updates
-            if t >= jitter and letter1_1.status == NOT_STARTED:
+            # *letterpic1_1* updates
+            if t >= jitter and letterpic1_1.status == NOT_STARTED:
                 # keep track of start time/frame for later
-                letter1_1.tStart = t  # not accounting for scr refresh
-                letter1_1.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(letter1_1, 'tStartRefresh')  # time at next scr refresh
-                letter1_1.setAutoDraw(True)
+                letterpic1_1.tStart = t  # not accounting for scr refresh
+                letterpic1_1.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letterpic1_1, 'tStartRefresh')  # time at next scr refresh
+                letterpic1_1.setAutoDraw(True)
             frameRemains = jitter + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-            if letter1_1.status == STARTED and t >= frameRemains:
+            if letterpic1_1.status == STARTED and t >= frameRemains:
                 # keep track of stop time/frame for later
-                letter1_1.tStop = t  # not accounting for scr refresh
-                letter1_1.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(letter1_1, 'tStopRefresh')  # time at next scr refresh
-                letter1_1.setAutoDraw(False)
+                letterpic1_1.tStop = t  # not accounting for scr refresh
+                letterpic1_1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(letterpic1_1, 'tStopRefresh')  # time at next scr refresh
+                letterpic1_1.setAutoDraw(False)
             
-            # *letter1_2* updates
-            if t >= jitter and letter1_2.status == NOT_STARTED:
+            # *letterpic1_2* updates
+            if t >= jitter and letterpic1_2.status == NOT_STARTED:
                 # keep track of start time/frame for later
-                letter1_2.tStart = t  # not accounting for scr refresh
-                letter1_2.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(letter1_2, 'tStartRefresh')  # time at next scr refresh
-                letter1_2.setAutoDraw(True)
+                letterpic1_2.tStart = t  # not accounting for scr refresh
+                letterpic1_2.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letterpic1_2, 'tStartRefresh')  # time at next scr refresh
+                letterpic1_2.setAutoDraw(True)
             frameRemains = jitter + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-            if letter1_2.status == STARTED and t >= frameRemains:
+            if letterpic1_2.status == STARTED and t >= frameRemains:
                 # keep track of stop time/frame for later
-                letter1_2.tStop = t  # not accounting for scr refresh
-                letter1_2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(letter1_2, 'tStopRefresh')  # time at next scr refresh
-                letter1_2.setAutoDraw(False)
+                letterpic1_2.tStop = t  # not accounting for scr refresh
+                letterpic1_2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(letterpic1_2, 'tStopRefresh')  # time at next scr refresh
+                letterpic1_2.setAutoDraw(False)
             
             # *resp* updates
             if t >= jitter and resp.status == NOT_STARTED:
@@ -1194,10 +1200,10 @@ for thisLetterMaster in letterMaster:
         practice.addData('myCount', myCount)
         practice.addData('fixation1.started', fixation1.tStartRefresh)
         practice.addData('fixation1.stopped', fixation1.tStopRefresh)
-        practice.addData('letter1_1.started', letter1_1.tStartRefresh)
-        practice.addData('letter1_1.stopped', letter1_1.tStopRefresh)
-        practice.addData('letter1_2.started', letter1_2.tStartRefresh)
-        practice.addData('letter1_2.stopped', letter1_2.tStopRefresh)
+        practice.addData('letterpic1_1.started', letterpic1_1.tStartRefresh)
+        practice.addData('letterpic1_1.stopped', letterpic1_1.tStopRefresh)
+        practice.addData('letterpic1_2.started', letterpic1_2.tStartRefresh)
+        practice.addData('letterpic1_2.stopped', letterpic1_2.tStopRefresh)
         # check responses
         if resp.keys in ['', [], None]:  # No response was made
             resp.keys = None
@@ -1519,11 +1525,11 @@ for thisLetterMaster in letterMaster:
         jitter = random() * (0.8 - 0.3) + 0.3
         jitter = round(jitter, 1) # round to 1 decimal place
         jitter2 = random() * (1.0-0.5) + 0.5
-        letter2_1.setText(letter3)
-        letter2_2.setText(letter4)
+        letterpic2_1.setImage(letter3)
+        letterpic2_2.setImage(letter4)
         test_resp = keyboard.Keyboard()
         # keep track of which components have finished
-        test_trialComponents = [fixation2, letter2_1, letter2_2, test_resp]
+        test_trialComponents = [fixation2, letterpic2_1, letterpic2_2, test_resp]
         for thisComponent in test_trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1554,35 +1560,35 @@ for thisLetterMaster in letterMaster:
                 win.timeOnFlip(fixation2, 'tStopRefresh')  # time at next scr refresh
                 fixation2.setAutoDraw(False)
             
-            # *letter2_1* updates
-            if t >= jitter2 and letter2_1.status == NOT_STARTED:
+            # *letterpic2_1* updates
+            if t >= jitter2 and letterpic2_1.status == NOT_STARTED:
                 # keep track of start time/frame for later
-                letter2_1.tStart = t  # not accounting for scr refresh
-                letter2_1.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(letter2_1, 'tStartRefresh')  # time at next scr refresh
-                letter2_1.setAutoDraw(True)
+                letterpic2_1.tStart = t  # not accounting for scr refresh
+                letterpic2_1.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letterpic2_1, 'tStartRefresh')  # time at next scr refresh
+                letterpic2_1.setAutoDraw(True)
             frameRemains = jitter2 + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-            if letter2_1.status == STARTED and t >= frameRemains:
+            if letterpic2_1.status == STARTED and t >= frameRemains:
                 # keep track of stop time/frame for later
-                letter2_1.tStop = t  # not accounting for scr refresh
-                letter2_1.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(letter2_1, 'tStopRefresh')  # time at next scr refresh
-                letter2_1.setAutoDraw(False)
+                letterpic2_1.tStop = t  # not accounting for scr refresh
+                letterpic2_1.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(letterpic2_1, 'tStopRefresh')  # time at next scr refresh
+                letterpic2_1.setAutoDraw(False)
             
-            # *letter2_2* updates
-            if t >= jitter2 and letter2_2.status == NOT_STARTED:
+            # *letterpic2_2* updates
+            if t >= jitter2 and letterpic2_2.status == NOT_STARTED:
                 # keep track of start time/frame for later
-                letter2_2.tStart = t  # not accounting for scr refresh
-                letter2_2.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(letter2_2, 'tStartRefresh')  # time at next scr refresh
-                letter2_2.setAutoDraw(True)
+                letterpic2_2.tStart = t  # not accounting for scr refresh
+                letterpic2_2.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letterpic2_2, 'tStartRefresh')  # time at next scr refresh
+                letterpic2_2.setAutoDraw(True)
             frameRemains = jitter2 + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-            if letter2_2.status == STARTED and t >= frameRemains:
+            if letterpic2_2.status == STARTED and t >= frameRemains:
                 # keep track of stop time/frame for later
-                letter2_2.tStop = t  # not accounting for scr refresh
-                letter2_2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(letter2_2, 'tStopRefresh')  # time at next scr refresh
-                letter2_2.setAutoDraw(False)
+                letterpic2_2.tStop = t  # not accounting for scr refresh
+                letterpic2_2.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(letterpic2_2, 'tStopRefresh')  # time at next scr refresh
+                letterpic2_2.setAutoDraw(False)
             
             # *test_resp* updates
             if t >= jitter2 and test_resp.status == NOT_STARTED:
@@ -1659,10 +1665,10 @@ for thisLetterMaster in letterMaster:
             letterMaster.finished = True
         test.addData('fixation2.started', fixation2.tStartRefresh)
         test.addData('fixation2.stopped', fixation2.tStopRefresh)
-        test.addData('letter2_1.started', letter2_1.tStartRefresh)
-        test.addData('letter2_1.stopped', letter2_1.tStopRefresh)
-        test.addData('letter2_2.started', letter2_2.tStartRefresh)
-        test.addData('letter2_2.stopped', letter2_2.tStopRefresh)
+        test.addData('letterpic2_1.started', letterpic2_1.tStartRefresh)
+        test.addData('letterpic2_1.stopped', letterpic2_1.tStopRefresh)
+        test.addData('letterpic2_2.started', letterpic2_2.tStartRefresh)
+        test.addData('letterpic2_2.stopped', letterpic2_2.tStopRefresh)
         # check responses
         if test_resp.keys in ['', [], None]:  # No response was made
             test_resp.keys = None
@@ -1793,11 +1799,11 @@ for thisLetterMaster in letterMaster:
         continueRoutine = True
         # update component parameters for each repeat
         quest.setText(question)
-        letter_string.setText(learnt_letters)
-        number_string.setText('1    2    3    4    5    6')
+        letter_string_pic.setImage(learnt_letters)
+        number_string_pic.setImage(numbers)
         learnt_resp = keyboard.Keyboard()
         # keep track of which components have finished
-        Learning_CheckComponents = [quest, letter_string, number_string, learnt_resp]
+        Learning_CheckComponents = [quest, letter_string_pic, number_string_pic, learnt_resp]
         for thisComponent in Learning_CheckComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1821,21 +1827,21 @@ for thisLetterMaster in letterMaster:
                 win.timeOnFlip(quest, 'tStartRefresh')  # time at next scr refresh
                 quest.setAutoDraw(True)
             
-            # *letter_string* updates
-            if t >= 0.0 and letter_string.status == NOT_STARTED:
+            # *letter_string_pic* updates
+            if t >= 0.0 and letter_string_pic.status == NOT_STARTED:
                 # keep track of start time/frame for later
-                letter_string.tStart = t  # not accounting for scr refresh
-                letter_string.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(letter_string, 'tStartRefresh')  # time at next scr refresh
-                letter_string.setAutoDraw(True)
+                letter_string_pic.tStart = t  # not accounting for scr refresh
+                letter_string_pic.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(letter_string_pic, 'tStartRefresh')  # time at next scr refresh
+                letter_string_pic.setAutoDraw(True)
             
-            # *number_string* updates
-            if t >= 0.0 and number_string.status == NOT_STARTED:
+            # *number_string_pic* updates
+            if t >= 0.0 and number_string_pic.status == NOT_STARTED:
                 # keep track of start time/frame for later
-                number_string.tStart = t  # not accounting for scr refresh
-                number_string.frameNStart = frameN  # exact frame index
-                win.timeOnFlip(number_string, 'tStartRefresh')  # time at next scr refresh
-                number_string.setAutoDraw(True)
+                number_string_pic.tStart = t  # not accounting for scr refresh
+                number_string_pic.frameNStart = frameN  # exact frame index
+                win.timeOnFlip(number_string_pic, 'tStartRefresh')  # time at next scr refresh
+                number_string_pic.setAutoDraw(True)
             
             # *learnt_resp* updates
             if t >= 0.0 and learnt_resp.status == NOT_STARTED:
@@ -1883,10 +1889,10 @@ for thisLetterMaster in letterMaster:
                 thisComponent.setAutoDraw(False)
         checks.addData('quest.started', quest.tStartRefresh)
         checks.addData('quest.stopped', quest.tStopRefresh)
-        checks.addData('letter_string.started', letter_string.tStartRefresh)
-        checks.addData('letter_string.stopped', letter_string.tStopRefresh)
-        checks.addData('number_string.started', number_string.tStartRefresh)
-        checks.addData('number_string.stopped', number_string.tStopRefresh)
+        checks.addData('letter_string_pic.started', letter_string_pic.tStartRefresh)
+        checks.addData('letter_string_pic.stopped', letter_string_pic.tStopRefresh)
+        checks.addData('number_string_pic.started', number_string_pic.tStartRefresh)
+        checks.addData('number_string_pic.stopped', number_string_pic.tStopRefresh)
         # check responses
         if learnt_resp.keys in ['', [], None]:  # No response was made
             learnt_resp.keys = None
