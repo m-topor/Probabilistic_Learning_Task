@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on May 27, 2019, at 19:22
+    on June 04, 2019, at 21:45
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -30,7 +30,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '3.1.0'
 expName = 'Probabilistic Learning'  # from the Builder filename that created this script
-expInfo = {'participant': '', '': ''}
+expInfo = {'Participant ID*': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='G:\\uni\\PhD\\Tasks\\Probabilistic Learning Pavlovia\\Probabilistic Learning_lastrun.py',
+    originPath='D:\\uni\\PhD\\Tasks\\Probabilistic Learning Pavlovia\\Probabilistic Learning_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -57,7 +57,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Setup the Window
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1366, 768], fullscr=True, screen=0, 
     winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True)
@@ -97,20 +97,22 @@ fixation0 = visual.TextStim(win=win, name='fixation0',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-letter0_1 = visual.TextStim(win=win, name='letter0_1',
-    text='default text',
-    font='hiragana tfb',
-    pos=(-0.1, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-1.0);
-letter0_2 = visual.TextStim(win=win, name='letter0_2',
-    text='default text',
-    font='hiragana tfb',
-    pos=(0.1, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
+letterpic0_1 = visual.ImageStim(
+    win=win,
+    name='letterpic0_1', 
+    image='sin', mask=None,
+    ori=0, pos=(-0.1, 0), size=(0.5, 0.5),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+letterpic0_2 = visual.ImageStim(
+    win=win,
+    name='letterpic0_2', 
+    image='sin', mask=None,
+    ori=0, pos=(0.1, 0), size=(0.5, 0.5),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "prep_feedback"
 prep_feedbackClock = core.Clock()
@@ -181,14 +183,14 @@ fixation1 = visual.TextStim(win=win, name='fixation1',
 letter1_1 = visual.TextStim(win=win, name='letter1_1',
     text='default text',
     font='hiragana tfb',
-    pos=[-0.1,0], height=0.1, wrapWidth=None, ori=0, 
+    pos=[-0.1,0], height=0.15, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 letter1_2 = visual.TextStim(win=win, name='letter1_2',
     text='default text',
     font='hiragana tfb',
-    pos=[0.1,0], height=0.1, wrapWidth=None, ori=0, 
+    pos=[0.1,0], height=0.15, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -244,14 +246,14 @@ fixation2 = visual.TextStim(win=win, name='fixation2',
 letter2_1 = visual.TextStim(win=win, name='letter2_1',
     text='default text',
     font='hiragana tfb',
-    pos=(-0.1, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(-0.1, 0), height=0.15, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 letter2_2 = visual.TextStim(win=win, name='letter2_2',
     text='default text',
     font='hiragana tfb',
-    pos=(0.1, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0.1, 0), height=0.15, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -259,7 +261,7 @@ letter2_2 = visual.TextStim(win=win, name='letter2_2',
 # Initialize components for Routine "check_instr"
 check_instrClock = core.Clock()
 check = visual.TextStim(win=win, name='check',
-    text='Thank you!\n\nNow think about the symbols you saw. \n\nYou will be asked to indicate which symbol you thought was the most likely to give you extra points. \n\nYou will then indicate which symbol was the least likely to give you points. \n\nYou will do this by using numbers 1-6 on top of the keyboard.\n1  2  3  4  5  or  6\nUse the numbers to identify the letter of your choice. \n\n\nPress any key to continue.',
+    text='Well done!\n\nNow think about the symbols you saw. \n\nWhich symbol was the MOST likely to give you ponts? \n\nWhich symbol was the LEAST likely to give you points? \n\nOn the next screen, use numbers:\n1  2  3  4  5  or  6 on top of the keyboard.\n\nIdentify the symbols of your choice. \n\n\nPress any key to continue.',
     font='Arial',
     pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -520,11 +522,11 @@ for thisPreparation in preparation:
     continueRoutine = True
     routineTimer.add(2.000000)
     # update component parameters for each repeat
-    letter0_1.setText(letter10)
-    letter0_2.setText(letter20)
+    letterpic0_1.setImage(letter10)
+    letterpic0_2.setImage(letter20)
     prep_resp = keyboard.Keyboard()
     # keep track of which components have finished
-    prepComponents = [fixation0, letter0_1, letter0_2, prep_resp]
+    prepComponents = [fixation0, letterpic0_1, letterpic0_2, prep_resp]
     for thisComponent in prepComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -555,35 +557,35 @@ for thisPreparation in preparation:
             win.timeOnFlip(fixation0, 'tStopRefresh')  # time at next scr refresh
             fixation0.setAutoDraw(False)
         
-        # *letter0_1* updates
-        if t >= 0.5 and letter0_1.status == NOT_STARTED:
+        # *letterpic0_1* updates
+        if t >= 0.5 and letterpic0_1.status == NOT_STARTED:
             # keep track of start time/frame for later
-            letter0_1.tStart = t  # not accounting for scr refresh
-            letter0_1.frameNStart = frameN  # exact frame index
-            win.timeOnFlip(letter0_1, 'tStartRefresh')  # time at next scr refresh
-            letter0_1.setAutoDraw(True)
+            letterpic0_1.tStart = t  # not accounting for scr refresh
+            letterpic0_1.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(letterpic0_1, 'tStartRefresh')  # time at next scr refresh
+            letterpic0_1.setAutoDraw(True)
         frameRemains = 0.5 + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if letter0_1.status == STARTED and t >= frameRemains:
+        if letterpic0_1.status == STARTED and t >= frameRemains:
             # keep track of stop time/frame for later
-            letter0_1.tStop = t  # not accounting for scr refresh
-            letter0_1.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(letter0_1, 'tStopRefresh')  # time at next scr refresh
-            letter0_1.setAutoDraw(False)
+            letterpic0_1.tStop = t  # not accounting for scr refresh
+            letterpic0_1.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(letterpic0_1, 'tStopRefresh')  # time at next scr refresh
+            letterpic0_1.setAutoDraw(False)
         
-        # *letter0_2* updates
-        if t >= 0.5 and letter0_2.status == NOT_STARTED:
+        # *letterpic0_2* updates
+        if t >= 0.5 and letterpic0_2.status == NOT_STARTED:
             # keep track of start time/frame for later
-            letter0_2.tStart = t  # not accounting for scr refresh
-            letter0_2.frameNStart = frameN  # exact frame index
-            win.timeOnFlip(letter0_2, 'tStartRefresh')  # time at next scr refresh
-            letter0_2.setAutoDraw(True)
+            letterpic0_2.tStart = t  # not accounting for scr refresh
+            letterpic0_2.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(letterpic0_2, 'tStartRefresh')  # time at next scr refresh
+            letterpic0_2.setAutoDraw(True)
         frameRemains = 0.5 + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if letter0_2.status == STARTED and t >= frameRemains:
+        if letterpic0_2.status == STARTED and t >= frameRemains:
             # keep track of stop time/frame for later
-            letter0_2.tStop = t  # not accounting for scr refresh
-            letter0_2.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(letter0_2, 'tStopRefresh')  # time at next scr refresh
-            letter0_2.setAutoDraw(False)
+            letterpic0_2.tStop = t  # not accounting for scr refresh
+            letterpic0_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(letterpic0_2, 'tStopRefresh')  # time at next scr refresh
+            letterpic0_2.setAutoDraw(False)
         
         # *prep_resp* updates
         if t >= 0.5 and prep_resp.status == NOT_STARTED:
@@ -644,10 +646,10 @@ for thisPreparation in preparation:
             thisComponent.setAutoDraw(False)
     preparation.addData('fixation0.started', fixation0.tStartRefresh)
     preparation.addData('fixation0.stopped', fixation0.tStopRefresh)
-    preparation.addData('letter0_1.started', letter0_1.tStartRefresh)
-    preparation.addData('letter0_1.stopped', letter0_1.tStopRefresh)
-    preparation.addData('letter0_2.started', letter0_2.tStartRefresh)
-    preparation.addData('letter0_2.stopped', letter0_2.tStopRefresh)
+    preparation.addData('letterpic0_1.started', letterpic0_1.tStartRefresh)
+    preparation.addData('letterpic0_1.stopped', letterpic0_1.tStopRefresh)
+    preparation.addData('letterpic0_2.started', letterpic0_2.tStartRefresh)
+    preparation.addData('letterpic0_2.stopped', letterpic0_2.tStopRefresh)
     # check responses
     if prep_resp.keys in ['', [], None]:  # No response was made
         prep_resp.keys = None
@@ -1151,13 +1153,19 @@ for thisLetterMaster in letterMaster:
         resplist2.append(resp2)
         resplist3.append(resp3)
         
+        Corr1 = sum(resplist1[-60:])
+        Corr2 = sum(resplist2[-60:])
+        Corr3 = sum(resplist3[-60:])
         
         
+        #add a variable in the output that will record when participants
+        #respond with A C or E in the learning phase
         practice.addData('resp1', resp1)
         
         practice.addData('resp2', resp2)
         
         practice.addData('resp3', resp3)
+        
         
         practice.addData('response1', resplist1[0:10])
         
@@ -1165,6 +1173,8 @@ for thisLetterMaster in letterMaster:
         
         practice.addData('response3', resplist3[0:10])
         
+        #add a variable in the output that will count the 
+        # performance on different letter pairs
         practice.addData('Corr1', Corr1)
         
         practice.addData('Corr2', Corr2)
@@ -1172,6 +1182,10 @@ for thisLetterMaster in letterMaster:
         practice.addData('Corr3', Corr3)
         
         practice.addData('jitter', jitter)
+        
+        #add a variable that will count in the output
+        # how many times the learning phase and the testing
+        # phase occur
         
         practice.addData('myCount1', myCount1)
         practice.addData('myCount2', myCount2)

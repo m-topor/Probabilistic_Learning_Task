@@ -83,8 +83,8 @@ var Prep_InstructionClock;
 var instr1;
 var prepClock;
 var fixation0;
-var letter0_1;
-var letter0_2;
+var letterpic0_1;
+var letterpic0_2;
 var prep_feedbackClock;
 var prep_feedb;
 var Prep_overClock;
@@ -171,28 +171,24 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  letter0_1 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter0_1',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [(- 0.1), 0], height: 0.15,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+  letterpic0_1 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letterpic0_1', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [(- 0.1), 0], size : [0.5, 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
   });
-  
-  letter0_2 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter0_2',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [0.1, 0], height: 0.15,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+  letterpic0_2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letterpic0_2', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0.1, 0], size : [0.5, 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
   });
-  
   // Initialize components for Routine "prep_feedback"
   prep_feedbackClock = new util.Clock();
   prep_feedb = new visual.TextStim({
@@ -910,15 +906,15 @@ function prepRoutineBegin() {
   frameN = -1;
   routineTimer.add(2.000000);
   // update component parameters for each repeat
-  letter0_1.setText(letter10);
-  letter0_2.setText(letter20);
+  letterpic0_1.setImage(letter10);
+  letterpic0_2.setImage(letter20);
   prep_resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
   prepComponents = [];
   prepComponents.push(fixation0);
-  prepComponents.push(letter0_1);
-  prepComponents.push(letter0_2);
+  prepComponents.push(letterpic0_1);
+  prepComponents.push(letterpic0_2);
   prepComponents.push(prep_resp);
   
   prepComponents.forEach( function(thisComponent) {
@@ -951,30 +947,30 @@ function prepRoutineEachFrame() {
     fixation0.setAutoDraw(false);
   }
   
-  // *letter0_1* updates
-  if (t >= 0.5 && letter0_1.status === PsychoJS.Status.NOT_STARTED) {
+  // *letterpic0_1* updates
+  if (t >= 0.5 && letterpic0_1.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter0_1.tStart = t;  // (not accounting for frame time here)
-    letter0_1.frameNStart = frameN;  // exact frame index
-    letter0_1.setAutoDraw(true);
+    letterpic0_1.tStart = t;  // (not accounting for frame time here)
+    letterpic0_1.frameNStart = frameN;  // exact frame index
+    letterpic0_1.setAutoDraw(true);
   }
 
   frameRemains = 0.5 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-  if (letter0_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-    letter0_1.setAutoDraw(false);
+  if (letterpic0_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    letterpic0_1.setAutoDraw(false);
   }
   
-  // *letter0_2* updates
-  if (t >= 0.5 && letter0_2.status === PsychoJS.Status.NOT_STARTED) {
+  // *letterpic0_2* updates
+  if (t >= 0.5 && letterpic0_2.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter0_2.tStart = t;  // (not accounting for frame time here)
-    letter0_2.frameNStart = frameN;  // exact frame index
-    letter0_2.setAutoDraw(true);
+    letterpic0_2.tStart = t;  // (not accounting for frame time here)
+    letterpic0_2.frameNStart = frameN;  // exact frame index
+    letterpic0_2.setAutoDraw(true);
   }
 
   frameRemains = 0.5 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-  if (letter0_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-    letter0_2.setAutoDraw(false);
+  if (letterpic0_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    letterpic0_2.setAutoDraw(false);
   }
   
   // *prep_resp* updates
