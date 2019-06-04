@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on June 05, 2019, at 00:04
+    on June 05, 2019, at 00:43
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -285,7 +285,7 @@ letter_string_pic = visual.ImageStim(
     win=win,
     name='letter_string_pic', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.6, 0.6),
+    ori=0, pos=(0, 0.1), size=(0.8, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -293,7 +293,7 @@ number_string_pic = visual.ImageStim(
     win=win,
     name='number_string_pic', 
     image='sin', mask=None,
-    ori=0, pos=(0, -0.3), size=(0.6, 0.6),
+    ori=0, pos=(0, -0.2), size=(0.8, 0.1),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
