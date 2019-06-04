@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.0),
-    on June 04, 2019, at 23:23
+    on June 05, 2019, at 00:04
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -277,7 +277,7 @@ Learning_CheckClock = core.Clock()
 quest = visual.TextStim(win=win, name='quest',
     text='default text',
     font='Arial',
-    pos=(0, 0.2), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, 0.3), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -285,7 +285,7 @@ letter_string_pic = visual.ImageStim(
     win=win,
     name='letter_string_pic', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.4, 0.4),
+    ori=0, pos=(0, 0), size=(0.6, 0.6),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -293,7 +293,7 @@ number_string_pic = visual.ImageStim(
     win=win,
     name='number_string_pic', 
     image='sin', mask=None,
-    ori=0, pos=(0, -0.15), size=(0.4, 0.4),
+    ori=0, pos=(0, -0.3), size=(0.6, 0.6),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
