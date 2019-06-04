@@ -106,8 +106,8 @@ var Corr1;
 var Corr2;
 var Corr3;
 var fixation1;
-var letter1_1;
-var letter1_2;
+var letterpic1_1;
+var letterpic1_2;
 var feedbackClock;
 var blank_feed;
 var feedb;
@@ -117,14 +117,14 @@ var Test_InstrClock;
 var instr3;
 var test_trialClock;
 var fixation2;
-var letter2_1;
-var letter2_2;
+var letterpic2_1;
+var letterpic2_2;
 var check_instrClock;
 var check;
 var Learning_CheckClock;
 var quest;
-var letter_string;
-var number_string;
+var letter_string_pic;
+var number_string_pic;
 var test_overClock;
 var t_outro;
 var task_overClock;
@@ -259,28 +259,24 @@ function experimentInit() {
     depth: -1.0 
   });
   
-  letter1_1 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter1_1',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [(- 0.1), 0], height: 0.15,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+  letterpic1_1 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letterpic1_1', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [(- 0.1), 0], size : [0.2, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
   });
-  
-  letter1_2 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter1_2',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [0.1, 0], height: 0.15,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+  letterpic1_2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letterpic1_2', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0.1, 0], size : [0.2, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -3.0 
   });
-  
   // Initialize components for Routine "feedback"
   feedbackClock = new util.Clock();
   blank_feed = new visual.TextStim({
@@ -344,28 +340,24 @@ function experimentInit() {
     depth: -1.0 
   });
   
-  letter2_1 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter2_1',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [(- 0.1), 0], height: 0.15,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+  letterpic2_1 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letterpic2_1', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [(- 0.1), 0], size : [0.2, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
   });
-  
-  letter2_2 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter2_2',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [0.1, 0], height: 0.15,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -3.0 
+  letterpic2_2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letterpic2_2', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0.1, 0], size : [0.2, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -3.0 
   });
-  
   // Initialize components for Routine "check_instr"
   check_instrClock = new util.Clock();
   check = new visual.TextStim({
@@ -392,28 +384,24 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  letter_string = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'letter_string',
-    text: 'default text',
-    font: 'hiragana tfb',
-    units : undefined, 
-    pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+  letter_string_pic = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'letter_string_pic', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [0.2, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
   });
-  
-  number_string = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'number_string',
-    text: 'default text',
-    font: 'Arial',
-    units : undefined, 
-    pos: [0, (- 0.1)], height: 0.08,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+  number_string_pic = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'number_string_pic', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, (- 0.1)], size : [0.2, 0.2],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
   });
-  
   // Initialize components for Routine "test_over"
   test_overClock = new util.Clock();
   t_outro = new visual.TextStim({
@@ -1483,15 +1471,15 @@ function trialRoutineBegin() {
   }
   
   
-  letter1_1.setText(letter1);
-  letter1_2.setText(letter2);
+  letterpic1_1.setImage(letter1);
+  letterpic1_2.setImage(letter2);
   resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
   trialComponents = [];
   trialComponents.push(fixation1);
-  trialComponents.push(letter1_1);
-  trialComponents.push(letter1_2);
+  trialComponents.push(letterpic1_1);
+  trialComponents.push(letterpic1_2);
   trialComponents.push(resp);
   
   trialComponents.forEach( function(thisComponent) {
@@ -1524,30 +1512,30 @@ function trialRoutineEachFrame() {
     fixation1.setAutoDraw(false);
   }
   
-  // *letter1_1* updates
-  if (t >= jitter && letter1_1.status === PsychoJS.Status.NOT_STARTED) {
+  // *letterpic1_1* updates
+  if (t >= jitter && letterpic1_1.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter1_1.tStart = t;  // (not accounting for frame time here)
-    letter1_1.frameNStart = frameN;  // exact frame index
-    letter1_1.setAutoDraw(true);
+    letterpic1_1.tStart = t;  // (not accounting for frame time here)
+    letterpic1_1.frameNStart = frameN;  // exact frame index
+    letterpic1_1.setAutoDraw(true);
   }
 
   frameRemains = jitter + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-  if (letter1_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-    letter1_1.setAutoDraw(false);
+  if (letterpic1_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    letterpic1_1.setAutoDraw(false);
   }
   
-  // *letter1_2* updates
-  if (t >= jitter && letter1_2.status === PsychoJS.Status.NOT_STARTED) {
+  // *letterpic1_2* updates
+  if (t >= jitter && letterpic1_2.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter1_2.tStart = t;  // (not accounting for frame time here)
-    letter1_2.frameNStart = frameN;  // exact frame index
-    letter1_2.setAutoDraw(true);
+    letterpic1_2.tStart = t;  // (not accounting for frame time here)
+    letterpic1_2.frameNStart = frameN;  // exact frame index
+    letterpic1_2.setAutoDraw(true);
   }
 
   frameRemains = jitter + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-  if (letter1_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-    letter1_2.setAutoDraw(false);
+  if (letterpic1_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    letterpic1_2.setAutoDraw(false);
   }
   
   // *resp* updates
@@ -2037,15 +2025,15 @@ function test_trialRoutineBegin() {
   }
   
   
-  letter2_1.setText(letter3);
-  letter2_2.setText(letter4);
+  letterpic2_1.setImage(letter3);
+  letterpic2_2.setImage(letter4);
   test_resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
   test_trialComponents = [];
   test_trialComponents.push(fixation2);
-  test_trialComponents.push(letter2_1);
-  test_trialComponents.push(letter2_2);
+  test_trialComponents.push(letterpic2_1);
+  test_trialComponents.push(letterpic2_2);
   test_trialComponents.push(test_resp);
   
   test_trialComponents.forEach( function(thisComponent) {
@@ -2078,30 +2066,30 @@ function test_trialRoutineEachFrame() {
     fixation2.setAutoDraw(false);
   }
   
-  // *letter2_1* updates
-  if (t >= jitter2 && letter2_1.status === PsychoJS.Status.NOT_STARTED) {
+  // *letterpic2_1* updates
+  if (t >= jitter2 && letterpic2_1.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter2_1.tStart = t;  // (not accounting for frame time here)
-    letter2_1.frameNStart = frameN;  // exact frame index
-    letter2_1.setAutoDraw(true);
+    letterpic2_1.tStart = t;  // (not accounting for frame time here)
+    letterpic2_1.frameNStart = frameN;  // exact frame index
+    letterpic2_1.setAutoDraw(true);
   }
 
   frameRemains = jitter2 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-  if (letter2_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-    letter2_1.setAutoDraw(false);
+  if (letterpic2_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    letterpic2_1.setAutoDraw(false);
   }
   
-  // *letter2_2* updates
-  if (t >= jitter2 && letter2_2.status === PsychoJS.Status.NOT_STARTED) {
+  // *letterpic2_2* updates
+  if (t >= jitter2 && letterpic2_2.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter2_2.tStart = t;  // (not accounting for frame time here)
-    letter2_2.frameNStart = frameN;  // exact frame index
-    letter2_2.setAutoDraw(true);
+    letterpic2_2.tStart = t;  // (not accounting for frame time here)
+    letterpic2_2.frameNStart = frameN;  // exact frame index
+    letterpic2_2.setAutoDraw(true);
   }
 
   frameRemains = jitter2 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-  if (letter2_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-    letter2_2.setAutoDraw(false);
+  if (letterpic2_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    letterpic2_2.setAutoDraw(false);
   }
   
   // *test_resp* updates
@@ -2315,15 +2303,15 @@ function Learning_CheckRoutineBegin() {
   frameN = -1;
   // update component parameters for each repeat
   quest.setText(question);
-  letter_string.setText(learnt_letters);
-  number_string.setText('1    2    3    4    5    6');
+  letter_string_pic.setImage(learnt_letters);
+  number_string_pic.setImage(numbers);
   learnt_resp = new core.BuilderKeyResponse(psychoJS);
   
   // keep track of which components have finished
   Learning_CheckComponents = [];
   Learning_CheckComponents.push(quest);
-  Learning_CheckComponents.push(letter_string);
-  Learning_CheckComponents.push(number_string);
+  Learning_CheckComponents.push(letter_string_pic);
+  Learning_CheckComponents.push(number_string_pic);
   Learning_CheckComponents.push(learnt_resp);
   
   Learning_CheckComponents.forEach( function(thisComponent) {
@@ -2352,21 +2340,21 @@ function Learning_CheckRoutineEachFrame() {
   }
 
   
-  // *letter_string* updates
-  if (t >= 0.0 && letter_string.status === PsychoJS.Status.NOT_STARTED) {
+  // *letter_string_pic* updates
+  if (t >= 0.0 && letter_string_pic.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    letter_string.tStart = t;  // (not accounting for frame time here)
-    letter_string.frameNStart = frameN;  // exact frame index
-    letter_string.setAutoDraw(true);
+    letter_string_pic.tStart = t;  // (not accounting for frame time here)
+    letter_string_pic.frameNStart = frameN;  // exact frame index
+    letter_string_pic.setAutoDraw(true);
   }
 
   
-  // *number_string* updates
-  if (t >= 0.0 && number_string.status === PsychoJS.Status.NOT_STARTED) {
+  // *number_string_pic* updates
+  if (t >= 0.0 && number_string_pic.status === PsychoJS.Status.NOT_STARTED) {
     // keep track of start time/frame for later
-    number_string.tStart = t;  // (not accounting for frame time here)
-    number_string.frameNStart = frameN;  // exact frame index
-    number_string.setAutoDraw(true);
+    number_string_pic.tStart = t;  // (not accounting for frame time here)
+    number_string_pic.frameNStart = frameN;  // exact frame index
+    number_string_pic.setAutoDraw(true);
   }
 
   
