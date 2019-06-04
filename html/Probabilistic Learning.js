@@ -387,7 +387,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units : undefined, 
-    pos: [0, 0.2], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -396,7 +396,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'letter_string_pic', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.4, 0.4],
+    ori : 0, pos : [0, 0], size : [0.6, 0.6],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -405,7 +405,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'number_string_pic', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, (- 0.15)], size : [0.4, 0.4],
+    ori : 0, pos : [0, (- 0.3)], size : [0.6, 0.6],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
