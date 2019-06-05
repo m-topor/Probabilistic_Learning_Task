@@ -388,7 +388,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'letter_string_pic', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0.1], size : [0.8, 0.1],
+    ori : 0, pos : [0, 0.15], size : [0.8, 0.2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -397,7 +397,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'number_string_pic', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, (- 0.2)], size : [0.8, 0.1],
+    ori : 0, pos : [0, (- 0.1)], size : [0.8, 0.1],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
